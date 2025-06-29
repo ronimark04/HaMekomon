@@ -53,10 +53,6 @@ const ProfilePage = () => {
         liked: 3,
         disliked: 3
     });
-    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-    const [showChangePasswordModal, setShowChangePasswordModal] = useState(false);
-    const [showDeleteAccountModal, setShowDeleteAccountModal] = useState(false);
-    const [showDeleteUserModal, setShowDeleteUserModal] = useState(false);
     const [artistNamesById, setArtistNamesById] = useState({});
     const [artistNamesByIdEng, setArtistNamesByIdEng] = useState({});
 
@@ -141,14 +137,6 @@ const ProfilePage = () => {
         }
         if (userId) fetchData();
     }, [userId]);
-
-    useEffect(() => {
-        function handleResize() {
-            setIsMobile(window.innerWidth < 768);
-        }
-        window.addEventListener('resize', handleResize);
-        return () => window.removeEventListener('resize', handleResize);
-    }, []);
 
     // Helper to refresh all comment-related states
     const refreshAllComments = async () => {
@@ -413,7 +401,6 @@ const ProfilePage = () => {
 
     // Helper to get visible comments based on section and isMobile
     const getVisibleComments = (commentsArr, section) => {
-        if (!isMobile) return commentsArr.filter(comment => !comment.deleted);
         return commentsArr.filter(comment => !comment.deleted).slice(0, showCount[section]);
     };
 
@@ -711,7 +698,7 @@ const ProfilePage = () => {
                     display: 'flex',
                     gap: '24px',
                     alignItems: 'flex-start',
-                    flexDirection: isMobile ? 'column' : (language === 'eng' ? 'row' : 'row-reverse'),
+                    flexDirection: language === 'eng' ? 'row' : 'row-reverse',
                     opacity: 0.85
                 }}
             >
@@ -722,9 +709,9 @@ const ProfilePage = () => {
                     borderRadius: 16,
                     boxShadow: '0 2px 8px #0001',
                     padding: 24,
-                    width: isMobile ? '100%' : '33.33%',
+                    width: '33.33%',
                     height: 'fit-content',
-                    marginBottom: isMobile ? 16 : 0
+                    marginBottom: 16
                 }}>
                     <h2 style={{
                         color: '#5D4037',
@@ -737,7 +724,7 @@ const ProfilePage = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                         {getVisibleComments(comments, 'comments').map(comment => renderComment(comment, isOwnProfile))}
                     </div>
-                    {isMobile && comments.filter(comment => !comment.deleted).length > showCount.comments && (
+                    {comments.filter(comment => !comment.deleted).length > showCount.comments && (
                         <div style={{ display: 'flex', justifyContent: language === 'heb' ? 'flex-end' : 'flex-start' }}>
                             <button
                                 style={{
@@ -767,10 +754,10 @@ const ProfilePage = () => {
                     borderRadius: 16,
                     boxShadow: '0 2px 8px #0001',
                     padding: 24,
-                    width: isMobile ? '100%' : '33.33%',
+                    width: '33.33%',
                     height: 'fit-content',
                     opacity: 0.85,
-                    marginBottom: isMobile ? 16 : 0
+                    marginBottom: 16
                 }}>
                     <h2 style={{
                         color: '#5D4037',
@@ -783,7 +770,7 @@ const ProfilePage = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                         {getVisibleComments(likedComments, 'liked').map(comment => renderComment(comment, false))}
                     </div>
-                    {isMobile && likedComments.filter(comment => !comment.deleted).length > showCount.liked && (
+                    {likedComments.filter(comment => !comment.deleted).length > showCount.liked && (
                         <div style={{ display: 'flex', justifyContent: language === 'heb' ? 'flex-end' : 'flex-start' }}>
                             <button
                                 style={{
@@ -813,7 +800,7 @@ const ProfilePage = () => {
                     borderRadius: 16,
                     boxShadow: '0 2px 8px #0001',
                     padding: 24,
-                    width: isMobile ? '100%' : '33.33%',
+                    width: '33.33%',
                     height: 'fit-content',
                     opacity: 0.85
                 }}>
@@ -828,7 +815,7 @@ const ProfilePage = () => {
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
                         {getVisibleComments(dislikedComments, 'disliked').map(comment => renderComment(comment, false))}
                     </div>
-                    {isMobile && dislikedComments.filter(comment => !comment.deleted).length > showCount.disliked && (
+                    {dislikedComments.filter(comment => !comment.deleted).length > showCount.disliked && (
                         <div style={{ display: 'flex', justifyContent: language === 'heb' ? 'flex-end' : 'flex-start' }}>
                             <button
                                 style={{

@@ -9,8 +9,26 @@ import ProfilePage from "./components/ProfilePage";
 import AdminPanel from "./components/AdminPanel";
 import { AuthProvider } from "./context/authContext";
 import Contact from "./components/Contact";
+import { useEffect, useState } from "react";
+import samllScreenImg from "./assets/samll-screen.png";
 
 function App() {
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  if (windowWidth < 1000) {
+    return (
+      <div style={{ minHeight: '100vh', minWidth: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'white', zIndex: 99999 }}>
+        <img src={samllScreenImg} alt="Small screen warning" style={{ width: 500, maxWidth: '90vw', height: 'auto' }} />
+      </div>
+    );
+  }
+
   return (
     <AuthProvider>
       <div className="min-h-screen">

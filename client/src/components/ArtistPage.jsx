@@ -428,28 +428,6 @@ const ArtistPage = () => {
 
     return (
         <>
-            <style>{`
-                @media (max-width: 768px) {
-                    .artistpage-flex-row {
-                        flex-direction: column !important;
-                        gap: 0 !important;
-                    }
-                    .artistpage-spotify {
-                        max-width: 100% !important;
-                        margin-bottom: 24px;
-                    }
-                    .artistpage-title {
-                        font-size: 2rem !important;
-                    }
-                    .artistpage-summary {
-                        order: 2 !important;
-                    }
-                    .artistpage-actions {
-                        order: 1 !important;
-                        margin-top: -25px !important;
-                    }
-                }
-            `}</style>
             <div style={{ minHeight: '100vh', padding: '24px 4vw' }}>
                 {/* Admin Edit Button */}
                 {user?.isAdmin && (

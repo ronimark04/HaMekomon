@@ -33,7 +33,6 @@ const AreaPage = () => {
     const [area, setArea] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const [isMobile, setIsMobile] = useState(false);
     const { language } = useLanguage();
     const { user } = useAuth();
 
@@ -95,19 +94,6 @@ const AreaPage = () => {
         };
     }, []);
 
-    // Effect for screen size detection
-    useEffect(() => {
-        const checkScreenSize = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-
-        checkScreenSize();
-        window.addEventListener('resize', checkScreenSize);
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
-
-    // --- End dynamic line width logic ---
-
     useEffect(() => {
         const fetchData = async () => {
             try {
@@ -163,103 +149,6 @@ const AreaPage = () => {
     const getLocalizedText = (textObj, defaultValue) => {
         if (!textObj) return defaultValue || null;
         return textObj[language];
-    };
-
-    // Helper to get avatar size based on rate
-    const getAvatarSize = (rate) => {
-        if (isMobile) {
-            // Mobile sizes (under 768px)
-            switch (rate) {
-                case 1: return 'w-32 h-32'; // 128px (was 208px)
-                case 2: return 'w-28 h-28'; // 112px (was 160px)
-                case 3: return 'w-24 h-24'; // 96px (was 144px)
-                case 4: return 'w-20 h-20'; // 80px (was 112px)
-                default: return 'w-32 h-32'; // Default to largest mobile size
-            }
-        } else {
-            // Desktop sizes (768px and above)
-            switch (rate) {
-                case 1: return 'w-52 h-52'; // 208px
-                case 2: return 'w-40 h-40'; // 160px
-                case 3: return 'w-36 h-36'; // 144px
-                case 4: return 'w-28 h-28'; // 112px
-                default: return 'w-52 h-52'; // Default to largest size
-            }
-        }
-    };
-
-    // Helper to get avatar pixel size based on rate
-    const getAvatarPixelSize = (rate) => {
-        if (isMobile) {
-            // Mobile sizes (under 768px)
-            switch (rate) {
-                case 1: return 128; // (was 208)
-                case 2: return 112; // (was 160)
-                case 3: return 96;  // (was 144)
-                case 4: return 80;  // (was 112)
-                default: return 128;
-            }
-        } else {
-            // Desktop sizes (768px and above)
-            switch (rate) {
-                case 1: return 208;
-                case 2: return 160;
-                case 3: return 144;
-                case 4: return 112;
-                default: return 208;
-            }
-        }
-    };
-
-    // Helper to get font size for location/year/bornElsewhere text based on rate
-    const getLocationFontSize = (rate) => {
-        if (isMobile) {
-            // Mobile font sizes (under 768px)
-            switch (rate) {
-                case 1: return "1.1rem"; // (was 1.5rem)
-                case 2: return "1.0rem"; // (was 1.3rem)
-                case 3: return "0.9rem"; // (was 1.1rem)
-                case 4: return "0.8rem"; // (was 0.9rem)
-                default: return "1.1rem";
-            }
-        } else {
-            // Desktop font sizes (768px and above)
-            switch (rate) {
-                case 1: return "1.5rem"; // Largest for rate 1
-                case 2: return "1.3rem"; // Slightly smaller for rate 2
-                case 3: return "1.1rem"; // Smaller for rate 3
-                case 4: return "0.9rem"; // Smallest for rate 4
-                default: return "1.5rem";
-            }
-        }
-    };
-
-    // Helper to get font size for bornElsewhere text based on rate
-    const getBornElsewhereFontSize = (rate) => {
-        if (isMobile) {
-            // Mobile font sizes (under 768px)
-            switch (rate) {
-                case 1: return "0.9rem"; // (was 1.1rem)
-                case 2: return "0.8rem"; // (was 0.95rem)
-                case 3: return "0.7rem"; // (was 0.8rem)
-                case 4: return "0.6rem"; // (was 0.65rem)
-                default: return "0.9rem";
-            }
-        } else {
-            // Desktop font sizes (768px and above)
-            switch (rate) {
-                case 1: return "1.1rem"; // Largest for rate 1
-                case 2: return "0.95rem"; // Slightly smaller for rate 2
-                case 3: return "0.8rem"; // Smaller for rate 3
-                case 4: return "0.65rem"; // Smallest for rate 4
-                default: return "1.1rem";
-            }
-        }
-    };
-
-    // Helper to get font size for artist name
-    const getArtistNameFontSize = () => {
-        return isMobile ? "1.8rem" : "2.5rem";
     };
 
     // Helper to normalize area name for comparison
@@ -344,7 +233,7 @@ const AreaPage = () => {
                 </div>
             )}
 
-            <div className={`flex justify-center items-start relative ${isMobile ? 'gap-48' : 'gap-96'}`}>
+            <div className="flex justify-center items-start relative gap-96">
                 {/* Left column */}
                 <div className="flex flex-col relative">
                     {leftColumnArtists.map((artist, idx) => {
@@ -361,12 +250,12 @@ const AreaPage = () => {
                         }
                         const showLocation = !isTelAvivArea(area?.name);
                         // Reverse: first avatar is right, second is left, etc.
-                        const offset = isMobile ? 30 : 60; // px, smaller on mobile
+                        const offset = 60; // px, smaller on mobile
                         const isLeft = idx % 2 !== 0;
                         return (
                             <div
                                 key={artist._id}
-                                className={`relative flex flex-col items-center ${isMobile ? 'mb-12' : 'mb-16'}`}
+                                className={`relative flex flex-col items-center mb-16`}
                                 style={{
                                     alignItems: isLeft ? 'flex-end' : 'flex-start',
                                     left: isLeft ? `-${offset}px` : `${offset}px`,
@@ -392,8 +281,8 @@ const AreaPage = () => {
                                 <div className="relative flex items-center justify-center w-full h-full">
                                     {/* ArtistActions absolutely positioned to the left */}
                                     {(() => {
-                                        const avatarPx = getAvatarPixelSize(artist.rate);
-                                        const actionOffset = isMobile ? 35 : 55; // Smaller offset on mobile
+                                        const avatarPx = 208;
+                                        const actionOffset = 55; // Smaller offset on mobile
                                         return (
                                             <div style={{
                                                 position: 'absolute',
@@ -423,10 +312,10 @@ const AreaPage = () => {
                                             style={{
                                                 color: "#FEF7D5",
                                                 fontWeight: 400,
-                                                fontSize: getArtistNameFontSize(),
+                                                fontSize: "2.5rem",
                                                 lineHeight: 1,
                                                 position: "absolute",
-                                                top: isMobile ? "-29px" : "-40px",
+                                                top: "-40px",
                                                 left: "50%",
                                                 transform: "translateX(-50%)",
                                                 textAlign: "center",
@@ -456,7 +345,7 @@ const AreaPage = () => {
                                                 <div className="relative">
                                                     <Avatar
                                                         src={artist.image?.url}
-                                                        className={`${getAvatarSize(artist.rate)} [&>img]:object-top`}
+                                                        className={`w-52 h-52 [&>img]:object-top`}
                                                         fallback={fallbackInitial}
                                                         radius="lg"
                                                         color="danger"
@@ -478,7 +367,7 @@ const AreaPage = () => {
                                                         style={{
                                                             color: "#FEEFB6",
                                                             fontWeight: 400,
-                                                            fontSize: getLocationFontSize(artist.rate),
+                                                            fontSize: "1.5rem",
                                                             lineHeight: 1.1,
                                                             fontFamily: 'adobe-hebrew',
                                                             fontStyle: 'normal',
@@ -515,7 +404,7 @@ const AreaPage = () => {
                                                                     )}
                                                                     <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
                                                                     <div style={{
-                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
+                                                                        fontSize: "1.1rem",
                                                                         fontStyle: 'italic',
                                                                         direction: language === 'heb' ? 'rtl' : 'ltr'
                                                                     }}>
@@ -543,7 +432,7 @@ const AreaPage = () => {
                                                                         <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
                                                                     )}
                                                                     <div style={{
-                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
+                                                                        fontSize: "1.1rem",
                                                                         fontStyle: 'italic',
                                                                         direction: language === 'heb' ? 'rtl' : 'ltr'
                                                                     }}>
@@ -573,7 +462,7 @@ const AreaPage = () => {
                     })}
                 </div>
                 {/* Right column */}
-                <div className={`flex flex-col relative ${isMobile ? 'mt-16' : 'mt-28'}`}>
+                <div className="flex flex-col relative mt-28">
                     {rightColumnArtists.map((artist, idx) => {
                         const artistNameRaw = getLocalizedText(artist.name, language === 'heb' ? 'לא ידוע' : 'Unknown');
                         const artistName = stripParentheses(artistNameRaw);
@@ -588,12 +477,12 @@ const AreaPage = () => {
                         }
                         const showLocation = !isTelAvivArea(area?.name);
                         // Reverse: first avatar is left, second is right, etc.
-                        const offset = isMobile ? 30 : 60; // px, smaller on mobile
+                        const offset = 60; // px, smaller on mobile
                         const isRight = idx % 2 !== 0;
                         return (
                             <div
                                 key={artist._id}
-                                className={`relative flex flex-col items-center ${isMobile ? 'mb-12' : 'mb-16'}`}
+                                className={`relative flex flex-col items-center mb-16`}
                                 style={{
                                     alignItems: isRight ? 'flex-start' : 'flex-end',
                                     left: isRight ? `${offset}px` : `-${offset}px`,
@@ -619,8 +508,8 @@ const AreaPage = () => {
                                 <div className="relative flex items-center justify-center w-full h-full">
                                     {/* ArtistActions absolutely positioned to the right */}
                                     {(() => {
-                                        const avatarPx = getAvatarPixelSize(artist.rate);
-                                        const actionOffset = isMobile ? 35 : 55; // Smaller offset on mobile
+                                        const avatarPx = 208;
+                                        const actionOffset = 55; // Smaller offset on mobile
                                         return (
                                             <div style={{
                                                 position: 'absolute',
@@ -650,10 +539,10 @@ const AreaPage = () => {
                                             style={{
                                                 color: "#FEEFB6",
                                                 fontWeight: 400,
-                                                fontSize: getArtistNameFontSize(),
+                                                fontSize: "2.5rem",
                                                 lineHeight: 1,
                                                 position: "absolute",
-                                                top: isMobile ? "-29px" : "-40px",
+                                                top: "-40px",
                                                 left: "50%",
                                                 transform: "translateX(-50%)",
                                                 textAlign: "center",
@@ -683,7 +572,7 @@ const AreaPage = () => {
                                                 <div className="relative">
                                                     <Avatar
                                                         src={artist.image?.url}
-                                                        className={`${getAvatarSize(artist.rate)} [&>img]:object-top`}
+                                                        className={`w-52 h-52 [&>img]:object-top`}
                                                         fallback={fallbackInitial}
                                                         radius="lg"
                                                         color="danger"
@@ -705,7 +594,7 @@ const AreaPage = () => {
                                                         style={{
                                                             color: "#FEEFB6",
                                                             fontWeight: 400,
-                                                            fontSize: getLocationFontSize(artist.rate),
+                                                            fontSize: "1.5rem",
                                                             lineHeight: 1.1,
                                                             fontFamily: 'adobe-hebrew',
                                                             fontStyle: 'normal',
@@ -742,7 +631,7 @@ const AreaPage = () => {
                                                                     )}
                                                                     <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
                                                                     <div style={{
-                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
+                                                                        fontSize: "1.1rem",
                                                                         fontStyle: 'italic',
                                                                         direction: language === 'heb' ? 'rtl' : 'ltr'
                                                                     }}>
@@ -770,7 +659,7 @@ const AreaPage = () => {
                                                                         <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
                                                                     )}
                                                                     <div style={{
-                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
+                                                                        fontSize: "1.1rem",
                                                                         fontStyle: 'italic',
                                                                         direction: language === 'heb' ? 'rtl' : 'ltr'
                                                                     }}>

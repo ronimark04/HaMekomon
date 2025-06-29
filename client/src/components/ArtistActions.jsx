@@ -10,27 +10,8 @@ import { motion } from "framer-motion";
 const ICON_COLOR = "#C1873B";
 const ICON_HOVER_COLOR = "#A15E0A";
 
-const iconStyle = (active, hover, isMobile, rate) => {
-    // For mobile, all rates have the same size
-    if (isMobile) {
-        return {
-            width: 28,
-            height: 28,
-            background: "none",
-            border: "none",
-            color: hover ? ICON_HOVER_COLOR : active ? ICON_HOVER_COLOR : ICON_COLOR,
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            margin: "6px 0",
-            cursor: "pointer",
-            position: "relative",
-            transition: "color 0.15s",
-            opacity: 0.85
-        };
-    }
-
-    // For desktop, rate 4 gets smaller size
+const iconStyle = (active, hover, _isMobile, rate) => {
+    // Only keep desktop logic
     const isRate4 = rate === 4;
     return {
         width: isRate4 ? 32 : 40,
@@ -62,20 +43,8 @@ export default function ArtistActions({
     const [comments, setComments] = useState(0);
     const [hovered, setHovered] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [isMobile, setIsMobile] = useState(false);
     const navigate = useNavigate();
     const { user } = useAuth();
-
-    // Effect for screen size detection
-    useEffect(() => {
-        const checkScreenSize = () => {
-            setIsMobile(window.innerWidth < 768);
-        };
-
-        checkScreenSize();
-        window.addEventListener('resize', checkScreenSize);
-        return () => window.removeEventListener('resize', checkScreenSize);
-    }, []);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -174,8 +143,8 @@ export default function ArtistActions({
         {
             key: "like",
             icon: <LikeIcon style={{
-                width: isMobile ? 22 : (rate === 4 ? 26 : 32),
-                height: isMobile ? 22 : (rate === 4 ? 26 : 32),
+                width: 32,
+                height: 32,
                 display: 'block'
             }} />,
             count: likes,
@@ -183,19 +152,19 @@ export default function ArtistActions({
             active: liked,
             countStyle: column === 'right'
                 ? {
-                    right: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
-                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
+                    right: "-7px",
+                    top: "-6px"
                 }
                 : {
-                    left: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
-                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
+                    left: "-7px",
+                    top: "-6px"
                 }
         },
         {
             key: "dislike",
             icon: <DislikeIcon style={{
-                width: isMobile ? 22 : (rate === 4 ? 26 : 32),
-                height: isMobile ? 22 : (rate === 4 ? 26 : 32),
+                width: 32,
+                height: 32,
                 display: 'block'
             }} />,
             count: dislikes,
@@ -203,33 +172,33 @@ export default function ArtistActions({
             active: disliked,
             countStyle: column === 'right'
                 ? {
-                    right: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
-                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
+                    right: "-7px",
+                    top: "-6px"
                 }
                 : {
-                    left: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
-                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
+                    left: "-7px",
+                    top: "-6px"
                 }
         },
         {
             key: "comment",
             icon: <CommentIcon style={{
-                width: isMobile ? 18 : (rate === 4 ? 20 : 26),
-                height: isMobile ? 18 : (rate === 4 ? 20 : 26),
+                width: 26,
+                height: 26,
                 display: 'block',
-                marginTop: isMobile ? '-10px' : (rate === 4 ? '-12px' : '-15px')
+                marginTop: '-12px'
             }} />,
             count: comments,
             onClick: handleCommentClick,
             active: false,
             countStyle: column === 'right'
                 ? {
-                    right: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
-                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
+                    right: "-7px",
+                    top: "-6px"
                 }
                 : {
-                    left: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
-                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
+                    left: "-7px",
+                    top: "-6px"
                 }
         },
     ];
@@ -261,7 +230,7 @@ export default function ArtistActions({
                     whileTap={{ scale: 0.9 }}
                 >
                     <div
-                        style={iconStyle(action.active, hovered === action.key, isMobile, rate)}
+                        style={iconStyle(action.active, hovered === action.key, false, rate)}
                         onClick={action.onClick}
                         onMouseEnter={() => setHovered(action.key)}
                         onMouseLeave={() => setHovered(null)}
@@ -271,9 +240,9 @@ export default function ArtistActions({
                             ...action.countStyle,
                             backgroundColor: "rgba(255, 255, 255, 0.8)",
                             color: ICON_COLOR,
-                            borderRadius: isMobile ? "8px" : (rate === 4 ? "10px" : "12px"),
-                            padding: isMobile ? "1px 4px" : (rate === 4 ? "1px 5px" : "2px 6px"),
-                            fontSize: isMobile ? "10px" : (rate === 4 ? "11px" : "12px"),
+                            borderRadius: "10px",
+                            padding: "1px 5px",
+                            fontSize: "11px",
                             fontWeight: 600,
                             boxShadow: "0 1px 4px rgba(0, 0, 0, 0.2)"
                         }}>
