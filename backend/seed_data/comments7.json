@@ -1,0 +1,1622 @@
+[
+    {
+        "thread_id": "Tuna_001",
+        "text": "Tuna's 'Yud Aleph 2' is a masterpiece. His lyrics about growing up in Petah Tikva hit so close to home. No one captures Israeli urban life like he does!",
+        "user_username": "maya_vocal",
+        "artist_name": "Tuna (rapper)",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "Tuna_001",
+        "text": "מסכים לגמרי! השיר 'רוק 30' פשוט מבריק, והקליפ עם הגרפיטי בפתח תקווה מראה כמה טונה מחובר לשורשים שלו.",
+        "user_username": "yossi_kibbutz",
+        "artist_name": "Tuna (rapper)",
+        "reply_to_text": "Tuna's 'Yud Aleph 2' is a masterpiece. His lyrics about growing up in Petah Tikva hit so close to home. No one captures Israeli urban life like he does!",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "Tuna_001",
+        "text": "Absolutely! And his collaboration with Shlomi Shaban on 'Avo Lecha' is so unique. Tuna always reinvents himself.",
+        "user_username": "noa_lyrics",
+        "artist_name": "Tuna (rapper)",
+        "reply_to_text": "מסכים לגמרי! השיר 'רוק 30' פשוט מבריק, והקליפ עם הגרפיטי בפתח תקווה מראה כמה טונה מחובר לשורשים שלו.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "Tuna_002",
+        "text": "האלבום 'טונהפארק' שינה את כל מה שחשבתי על היפ הופ ישראלי. טונה פשוט גאון מילולי.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Tuna (rapper)",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "Tuna_002",
+        "text": "Tuna's flow on 'Lo Levad' is insane. He brings so much energy to every live show!",
+        "user_username": "david_cohen",
+        "artist_name": "Tuna (rapper)",
+        "reply_to_text": "האלבום 'טונהפארק' שינה את כל מה שחשבתי על היפ הופ ישראלי. טונה פשוט גאון מילולי.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "Tuna_003",
+        "text": "הכי אהבתי את השיר 'סרט ערבי'. טונה תמיד מצליח להפתיע עם נושאים מקוריים.",
+        "user_username": "amir_guitar",
+        "artist_name": "Tuna (rapper)",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "JimboJ_001",
+        "text": "Jimbo J's spoken word style is so refreshing. 'Asiti' is a modern classic—his storytelling is next level!",
+        "user_username": "bookworm42",
+        "artist_name": "Jimbo J",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "JimboJ_001",
+        "text": "ההופעה שלו עם ויקטור ג'קסון הייתה מטורפת! ג'ימבו ג'יי יודע להרים קהל כמו אף אחד אחר.",
+        "user_username": "gabi_military",
+        "artist_name": "Jimbo J",
+        "reply_to_text": "Jimbo J's spoken word style is so refreshing. 'Asiti' is a modern classic—his storytelling is next level!",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "JimboJ_001",
+        "text": "Totally agree! His lyrics in 'Tzafuf' are so clever, and the social commentary is spot on.",
+        "user_username": "techguru2023",
+        "artist_name": "Jimbo J",
+        "reply_to_text": "ההופעה שלו עם ויקטור ג'קסון הייתה מטורפת! ג'ימבו ג'יי יודע להרים קהל כמו אף אחד אחר.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "JimboJ_002",
+        "text": "הקטע שלו על השירות בצבא ב'עשיתי' פשוט קורע. כל כך מזוהה עם זה!",
+        "user_username": "liron_drums",
+        "artist_name": "Jimbo J",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "JimboJ_002",
+        "text": "Jimbo J always brings humor and depth. His podcast appearances are just as good as his music!",
+        "user_username": "vinyl_eli",
+        "artist_name": "Jimbo J",
+        "reply_to_text": "הקטע שלו על השירות בצבא ב'עשיתי' פשוט קורע. כל כך מזוהה עם זה!",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "JimboJ_003",
+        "text": "הכי אהבתי את השיר 'אקסית מיתולוגית'. ג'ימבו ג'יי יודע לכתוב על החיים האמיתיים.",
+        "user_username": "nina_festival",
+        "artist_name": "Jimbo J",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "YossiElephant_001",
+        "text": "Yossi Elephant's guitar solos in 'Seder Yom' are legendary. Israeli rock wouldn't be the same without him.",
+        "user_username": "avi_radio",
+        "artist_name": "Yossi Elephant",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "YossiElephant_001",
+        "text": "הבריטון של יוסי אלפנט בלהקת הפליטים פשוט בלתי נשכח. כל שיר שלו מלא רגש.",
+        "user_username": "miriam_trad",
+        "artist_name": "Yossi Elephant",
+        "reply_to_text": "Yossi Elephant's guitar solos in 'Seder Yom' are legendary. Israeli rock wouldn't be the same without him.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "YossiElephant_001",
+        "text": "His work with HaChaverim Shel Natasha was so influential. Elephant's arrangements are still studied today.",
+        "user_username": "daniel_berg",
+        "artist_name": "Yossi Elephant",
+        "reply_to_text": "הבריטון של יוסי אלפנט בלהקת הפליטים פשוט בלתי נשכח. כל שיר שלו מלא רגש.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "YossiElephant_002",
+        "text": "הג'אמים הליליים שלו בכרכור הפכו לאגדה. יוסי אלפנט היה אמן אמיתי.",
+        "user_username": "rachel_gold",
+        "artist_name": "Yossi Elephant",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "YossiElephant_002",
+        "text": "I wish more people knew about his early work with Zako VeHaAniyot. Such raw talent!",
+        "user_username": "sophia_jazz",
+        "artist_name": "Yossi Elephant",
+        "reply_to_text": "הג'אמים הליליים שלו בכרכור הפכו לאגדה. יוסי אלפנט היה אמן אמיתי.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "YossiElephant_003",
+        "text": "הסולואים שלו ב'משטרה' תמיד עושים לי צמרמורת. גאון מוזיקלי אמיתי.",
+        "user_username": "yuval_sound",
+        "artist_name": "Yossi Elephant",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "MeirAriel_001",
+        "text": "Meir Ariel's poetic lyrics in 'Shir Kelev' are unmatched. He was truly the Bob Dylan of Israel.",
+        "user_username": "critic_alex",
+        "artist_name": "Meir Ariel",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "MeirAriel_001",
+        "text": "מאיר אריאל תמיד ידע לשלב הומור ועומק. 'טרובדור נודד' אמיתי, והשירים שלו נשארים לנצח.",
+        "user_username": "hila_journalist",
+        "artist_name": "Meir Ariel",
+        "reply_to_text": "Meir Ariel's poetic lyrics in 'Shir Kelev' are unmatched. He was truly the Bob Dylan of Israel.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "MeirAriel_001",
+        "text": "His influence on Israeli music is huge. Even artists like Shalom Hanoch and Ehud Banai cite him as inspiration.",
+        "user_username": "avi_radio",
+        "artist_name": "Meir Ariel",
+        "reply_to_text": "מאיר אריאל תמיד ידע לשלב הומור ועומק. 'טרובדור נודד' אמיתי, והשירים שלו נשארים לנצח.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "MeirAriel_002",
+        "text": "הכי אהבתי את 'נשל הנחש'. מאיר אריאל היה משורר אמיתי, לא רק זמר.",
+        "user_username": "gabi_military",
+        "artist_name": "Meir Ariel",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "MeirAriel_002",
+        "text": "'HaTishma Koli' still gives me chills. Meir Ariel's voice is so unique.",
+        "user_username": "coolgirl99",
+        "artist_name": "Meir Ariel",
+        "reply_to_text": "הכי אהבתי את 'נשל הנחש'. מאיר אריאל היה משורר אמיתי, לא רק זמר.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "MeirAriel_003",
+        "text": "הסיפורים שלו על קיבוץ משמרות תמיד מרגשים אותי. מאיר אריאל היה חלק מהנוף הישראלי.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Meir Ariel",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EddieButler_001",
+        "text": "Eddie Butler's performance with Eden at Eurovision 1999 was iconic. 'Happy Birthday' is still a party anthem!",
+        "user_username": "crypto_king",
+        "artist_name": "Eddie Butler (singer)",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EddieButler_001",
+        "text": "איזה קול אדיר! אדי בטלר תמיד מביא אנרגיה מטורפת לבמה, במיוחד באירוויזיון.",
+        "user_username": "avi_radio",
+        "artist_name": "Eddie Butler (singer)",
+        "reply_to_text": "Eddie Butler's performance with Eden at Eurovision 1999 was iconic. 'Happy Birthday' is still a party anthem!",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "EddieButler_001",
+        "text": "His solo song 'Together We Are One' at Eurovision 2006 deserved a better result. Such a powerful voice!",
+        "user_username": "daniel_berg",
+        "artist_name": "Eddie Butler (singer)",
+        "reply_to_text": "איזה קול אדיר! אדי בטלר תמיד מביא אנרגיה מטורפת לבמה, במיוחד באירוויזיון.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "EddieButler_002",
+        "text": "הסיפור שלו מדימונה עד הבמות הגדולות בעולם הוא השראה אמיתית. אדי בטלר מייצג את ישראל בכבוד.",
+        "user_username": "rachel_gold",
+        "artist_name": "Eddie Butler (singer)",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EddieButler_002",
+        "text": "Eddie's collaborations with Zehava Ben were so underrated. Love his soulful style!",
+        "user_username": "sophia_jazz",
+        "artist_name": "Eddie Butler (singer)",
+        "reply_to_text": "הסיפור שלו מדימונה עד הבמות הגדולות בעולם הוא השראה אמיתית. אדי בטלר מייצג את ישראל בכבוד.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "EddieButler_003",
+        "text": "ההופעות שלו באירופה תמיד מלאות באנרגיה. אדי בטלר הוא גאווה ישראלית.",
+        "user_username": "amir_guitar",
+        "artist_name": "Eddie Butler (singer)",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "MiriAloni_001",
+        "text": "Miri Aloni's performance of 'Shir Lashalom' before Rabin's assassination is one of the most powerful moments in Israeli history. Her voice gives me chills every time.",
+        "user_username": "noa_lyrics",
+        "artist_name": "Miri Aloni",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "MiriAloni_001",
+        "text": "אין כמו מירי אלוני",
+        "user_username": "avi_radio",
+        "artist_name": "Miri Aloni",
+        "reply_to_text": "Miri Aloni's performance of 'Shir Lashalom' before Rabin's assassination is one of the most powerful moments in Israeli history. Her voice gives me chills every time.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "MiriAloni_001",
+        "text": "Absolutely agree! Her role in 'Apocalypse' showed her versatility as both a singer and actress.",
+        "user_username": "bookworm42",
+        "artist_name": "Miri Aloni",
+        "reply_to_text": "אין כמו מירי אלוני",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "MiriAloni_002",
+        "text": "הסיפור שלה עם גבעת קוזלובסקי תמיד ריגש אותי. מרים אלוני היא חלק מההיסטוריה של גבעתיים.",
+        "user_username": "miriam_trad",
+        "artist_name": "Miri Aloni",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "MiriAloni_002",
+        "text": "Her voice in 'Shir Lashalom' is so iconic. I can't listen to it without getting emotional.",
+        "user_username": "maya_vocal",
+        "artist_name": "Miri Aloni",
+        "reply_to_text": "הסיפור שלה עם גבעת קוזלובסקי תמיד ריגש אותי. מרים אלוני היא חלק מההיסטוריה של גבעתיים.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "MiriAloni_003",
+        "text": "ההופעות שלה בסרטים ישראליים תמיד היו מרגשות. מרים אלוני היא אגדה.",
+        "user_username": "gabi_military",
+        "artist_name": "Miri Aloni",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EranZur_001",
+        "text": "Eran Zur's work with Tattoo and Carmela Gross Wagner is so underrated. His lyrics are deep and thought-provoking.",
+        "user_username": "critic_alex",
+        "artist_name": "Eran Zur",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EranZur_001",
+        "text": "ערן צור תמיד ידע לגעת בנושאים רגישים. השירים שלו עם רביעיית מסנר פשוט מרגשים.",
+        "user_username": "liron_drums",
+        "artist_name": "Eran Zur",
+        "reply_to_text": "Eran Zur's work with Tattoo and Carmela Gross Wagner is so underrated. His lyrics are deep and thought-provoking.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "EranZur_001",
+        "text": "His book is just as good as his music. Eran Zur is a true Israeli artist.",
+        "user_username": "daniel_berg",
+        "artist_name": "Eran Zur",
+        "reply_to_text": "ערן צור תמיד ידע לגעת בנושאים רגישים. השירים שלו עם רביעיית מסנר פשוט מרגשים.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "EranZur_002",
+        "text": "הסיפור שלו על הילדות בקריית ביאליק תמיד נוגע ללב. ערן צור הוא השראה.",
+        "user_username": "rachel_gold",
+        "artist_name": "Eran Zur",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EranZur_002",
+        "text": "I love how he brings Pink Floyd influences into Israeli rock. 'Basist who writes lyrics'—so cool!",
+        "user_username": "tom_indie",
+        "artist_name": "Eran Zur",
+        "reply_to_text": "הסיפור שלו על הילדות בקריית ביאליק תמיד נוגע ללב. ערן צור הוא השראה.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "EranZur_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. ערן צור הוא אחד הגדולים ברוק הישראלי.",
+        "user_username": "amir_guitar",
+        "artist_name": "Eran Zur",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "RivkaZohar_001",
+        "text": "Rivka Zohar's rendition of 'Prairie House' is hauntingly beautiful. Her voice is pure emotion.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Rivka Zohar",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "RivkaZohar_001",
+        "text": "רבקה זוהר תמיד מרגשת אותי. 'מה אברך' זה שיר שכל ישראלי מכיר.",
+        "user_username": "miriam_trad",
+        "artist_name": "Rivka Zohar",
+        "reply_to_text": "Rivka Zohar's rendition of 'Prairie House' is hauntingly beautiful. Her voice is pure emotion.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "RivkaZohar_001",
+        "text": "Her comeback in the 2000s was so inspiring. Rivka Zohar is a true legend.",
+        "user_username": "maya_vocal",
+        "artist_name": "Rivka Zohar",
+        "reply_to_text": "רבקה זוהר תמיד מרגשת אותי. 'מה אברך' זה שיר שכל ישראלי מכיר.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "RivkaZohar_002",
+        "text": "רבקה זוהר היא סמל",
+        "user_username": "hila_journalist",
+        "artist_name": "Rivka Zohar",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "RivkaZohar_002",
+        "text": "Her version of 'Ma Avarech' always makes me cry. Such a powerful song.",
+        "user_username": "coolgirl99",
+        "artist_name": "Rivka Zohar",
+        "reply_to_text": "רבקה זוהר היא סמל",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "RivkaZohar_003",
+        "text": "הקול שלה ב'בית הערבה' פשוט עוצר נשימה. רבקה זוהר היא אוצר לאומי.",
+        "user_username": "nina_festival",
+        "artist_name": "Rivka Zohar",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "NathanGoshen_001",
+        "text": "Nathan Goshen's songwriting is so honest. 'Thinking About It (Let It Go)' is a global hit for a reason!",
+        "user_username": "techguru2023",
+        "artist_name": "Nathan Goshen",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "NathanGoshen_001",
+        "text": "נתן גושן תמיד מצליח לרגש אותי. 'מה אם תבואי' זה שיר שלא יוצא מהראש.",
+        "user_username": "yuval_sound",
+        "artist_name": "Nathan Goshen",
+        "reply_to_text": "Nathan Goshen's songwriting is so honest. 'Thinking About It (Let It Go)' is a global hit for a reason!",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "NathanGoshen_001",
+        "text": "His journey from religious roots to pop stardom is so inspiring. Love his authenticity.",
+        "user_username": "avi_radio",
+        "artist_name": "Nathan Goshen",
+        "reply_to_text": "נתן גושן תמיד מצליח לרגש אותי. 'מה אם תבואי' זה שיר שלא יוצא מהראש.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "NathanGoshen_002",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. נתן גושן הוא אחד הזמרים הכי טובים בדור שלנו.",
+        "user_username": "gabi_military",
+        "artist_name": "Nathan Goshen",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "NathanGoshen_002",
+        "text": "'Ani Cholem' is such a beautiful song. Nathan Goshen's voice is so unique.",
+        "user_username": "maya_vocal",
+        "artist_name": "Nathan Goshen",
+        "reply_to_text": "ההופעות שלו תמיד מלאות באנרגיה. נתן גושן הוא אחד הזמרים הכי טובים בדור שלנו.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "NathanGoshen_003",
+        "text": "הכתיבה שלו תמיד נוגעת ללב. נתן גושן הוא משורר אמיתי.",
+        "user_username": "rachel_gold",
+        "artist_name": "Nathan Goshen",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "NasrinKadri_001",
+        "text": "Nasrin Kadri's voice is so powerful! Her performance of 'Ahava Ktana' on The X Factor was unforgettable.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Nasrin Kadri",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "NasrinKadri_001",
+        "text": "נסרין קדרי מביאה כבוד למוזיקה המזרחית. 'אלבי מעאק' זה שיר שמרגש כל פעם מחדש.",
+        "user_username": "amir_guitar",
+        "artist_name": "Nasrin Kadri",
+        "reply_to_text": "Nasrin Kadri's voice is so powerful! Her performance of 'Ahava Ktana' on The X Factor was unforgettable.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "NasrinKadri_001",
+        "text": "Her journey from Haifa to stardom is so inspiring. Nasrin is a role model for so many young artists.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Nasrin Kadri",
+        "reply_to_text": "נסרין קדרי מביאה כבוד למוזיקה המזרחית. 'אלבי מעאק' זה שיר שמרגש כל פעם מחדש.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "NasrinKadri_002",
+        "text": "ההופעות שלה תמיד מלאות באנרגיה. נסרין קדרי היא כוכבת אמיתית.",
+        "user_username": "nina_festival",
+        "artist_name": "Nasrin Kadri",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "NasrinKadri_002",
+        "text": "Her duet with Eyal Golan was amazing. Nasrin brings something new to every song.",
+        "user_username": "vinyl_eli",
+        "artist_name": "Nasrin Kadri",
+        "reply_to_text": "ההופעות שלה תמיד מלאות באנרגיה. נסרין קדרי היא כוכבת אמיתית.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "NasrinKadri_003",
+        "text": "הקול שלה ב'אהבה קטנה' פשוט עוצר נשימה. נסרין קדרי היא גאווה ישראלית.",
+        "user_username": "hila_journalist",
+        "artist_name": "Nasrin Kadri",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "ShmulikKraus_001",
+        "text": "Shmulik Kraus's guitar work in 'HaTishma Koli' is legendary. His partnership with Josie Katz created some of Israel's most beautiful songs.",
+        "user_username": "amir_guitar",
+        "artist_name": "Shmulik Kraus",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "ShmulikKraus_001",
+        "text": "השירים שלו עם יוסי כץ פשוט בלתי נשכחים. 'התשמע קולי' זה שיר שכל ישראלי מכיר.",
+        "user_username": "miriam_trad",
+        "artist_name": "Shmulik Kraus",
+        "reply_to_text": "Shmulik Kraus's guitar work in 'HaTishma Koli' is legendary. His partnership with Josie Katz created some of Israel's most beautiful songs.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "ShmulikKraus_001",
+        "text": "His solo album 'Shmulik Kraus' is a masterpiece. Such raw emotion in every song!",
+        "user_username": "vinyl_eli",
+        "artist_name": "Shmulik Kraus",
+        "reply_to_text": "השירים שלו עם יוסי כץ פשוט בלתי נשכחים. 'התשמע קולי' זה שיר שכל ישראלי מכיר.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "ShmulikKraus_002",
+        "text": "הגיטרה שלו ב'שיר אהבה פשוט' פשוט עוצרת נשימה. שמוליק קראוס היה גאון מוזיקלי.",
+        "user_username": "yuval_sound",
+        "artist_name": "Shmulik Kraus",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "ShmulikKraus_002",
+        "text": "His influence on Israeli folk music is huge. Kraus paved the way for so many artists.",
+        "user_username": "daniel_berg",
+        "artist_name": "Shmulik Kraus",
+        "reply_to_text": "הגיטרה שלו ב'שיר אהבה פשוט' פשוט עוצרת נשימה. שמוליק קראוס היה גאון מוזיקלי.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "ShmulikKraus_003",
+        "text": "הסיפור שלו עם להקת הנח\"ל תמיד מרגש אותי. שמוליק קראוס הוא חלק מההיסטוריה.",
+        "user_username": "avi_radio",
+        "artist_name": "Shmulik Kraus",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "NogaErez_001",
+        "text": "Noga Erez's 'Dance While You Shoot' is revolutionary! Her blend of electronic and hip-hop is so unique.",
+        "user_username": "techguru2023",
+        "artist_name": "Noga Erez",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "NogaErez_001",
+        "text": "נוגה ארז מביאה משהו חדש למוזיקה הישראלית. 'Off The Radar' זה אלבום גאוני.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Noga Erez",
+        "reply_to_text": "Noga Erez's 'Dance While You Shoot' is revolutionary! Her blend of electronic and hip-hop is so unique.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "NogaErez_001",
+        "text": "Her production skills are insane. 'KIDS' is such a powerful song about society.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Noga Erez",
+        "reply_to_text": "נוגה ארז מביאה משהו חדש למוזיקה הישראלית. 'Off The Radar' זה אלבום גאוני.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "NogaErez_002",
+        "text": "ההופעות שלה תמיד מלאות באנרגיה. נוגה ארז היא כוכבת בינלאומית אמיתית.",
+        "user_username": "nina_festival",
+        "artist_name": "Noga Erez",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "NogaErez_002",
+        "text": "'NO news on TV' is my anthem! Noga's lyrics are so relevant to our times.",
+        "user_username": "maya_vocal",
+        "artist_name": "Noga Erez",
+        "reply_to_text": "ההופעות שלה תמיד מלאות באנרגיה. נוגה ארז היא כוכבת בינלאומית אמיתית.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "NogaErez_003",
+        "text": "הקול שלה ב'Pity' פשוט עוצר נשימה. נוגה ארז היא גאונות מוזיקלית.",
+        "user_username": "hila_journalist",
+        "artist_name": "Noga Erez",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "Ryskinder_001",
+        "text": "Ryskinder's 'Killing Time' is such a mood! His electronic beats are addictive.",
+        "user_username": "crypto_king",
+        "artist_name": "Ryskinder",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "Ryskinder_001",
+        "text": "ריסקינדר מביא משהו חדש לסצנה האלקטרונית בישראל. 'Killing Time' זה להיט.",
+        "user_username": "yuval_sound",
+        "artist_name": "Ryskinder",
+        "reply_to_text": "Ryskinder's 'Killing Time' is such a mood! His electronic beats are addictive.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "Ryskinder_001",
+        "text": "His production style is so unique. Love how he blends different electronic genres.",
+        "user_username": "tom_indie",
+        "artist_name": "Ryskinder",
+        "reply_to_text": "ריסקינדר מביא משהו חדש לסצנה האלקטרונית בישראל. 'Killing Time' זה להיט.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "Ryskinder_002",
+        "text": "הביטים שלו תמיד עושים לי ריקוד. ריסקינדר הוא די ג'יי מוכשר.",
+        "user_username": "gabi_military",
+        "artist_name": "Ryskinder",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "Ryskinder_002",
+        "text": "His remixes are fire! Ryskinder knows how to make any song better.",
+        "user_username": "vinyl_eli",
+        "artist_name": "Ryskinder",
+        "reply_to_text": "הביטים שלו תמיד עושים לי ריקוד. ריסקינדר הוא די ג'יי מוכשר.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "Ryskinder_003",
+        "text": "המוזיקה שלו תמיד מעלה לי את האנרגיה. ריסקינדר הוא כוכב עולה.",
+        "user_username": "nina_festival",
+        "artist_name": "Ryskinder",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "CharlieMegira_001",
+        "text": "Charlie Megira's 'The Girl That Left The Boy' is hauntingly beautiful. His surf rock style is so unique in Israel.",
+        "user_username": "bookworm42",
+        "artist_name": "Charlie Megira",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "CharlieMegira_001",
+        "text": "צ'ארלי מגירה הביא משהו חדש למוזיקה הישראלית. הסרף רוק שלו פשוט מדהים.",
+        "user_username": "amir_guitar",
+        "artist_name": "Charlie Megira",
+        "reply_to_text": "Charlie Megira's 'The Girl That Left The Boy' is hauntingly beautiful. His surf rock style is so unique in Israel.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "CharlieMegira_001",
+        "text": "His guitar playing is incredible. Such a loss to the music world.",
+        "user_username": "critic_alex",
+        "artist_name": "Charlie Megira",
+        "reply_to_text": "צ'ארלי מגירה הביא משהו חדש למוזיקה הישראלית. הסרף רוק שלו פשוט מדהים.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "CharlieMegira_002",
+        "text": "האלבום 'The Girl That Left The Boy' הוא יצירת מופת. צ'ארלי מגירה היה גאון.",
+        "user_username": "liron_drums",
+        "artist_name": "Charlie Megira",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "CharlieMegira_002",
+        "text": "His influence on Israeli indie rock is huge. Charlie was ahead of his time.",
+        "user_username": "daniel_berg",
+        "artist_name": "Charlie Megira",
+        "reply_to_text": "האלבום 'The Girl That Left The Boy' הוא יצירת מופת. צ'ארלי מגירה היה גאון.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "CharlieMegira_003",
+        "text": "הגיטרה שלו תמיד מרגשת אותי. צ'ארלי מגירה הוא חלק מההיסטוריה של הרוק הישראלי.",
+        "user_username": "rachel_gold",
+        "artist_name": "Charlie Megira",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "MikaKarni_001",
+        "text": "Mika Karni's voice in 'Migdaror' is pure magic! Her performance on The X Factor was unforgettable.",
+        "user_username": "maya_vocal",
+        "artist_name": "Mika Karni",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "MikaKarni_001",
+        "text": "מיקה קרני היא אחת הזמרות הכי טובות בישראל. 'מגדרור' זה שיר שתמיד מרגש אותי.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Mika Karni",
+        "reply_to_text": "Mika Karni's voice in 'Migdaror' is pure magic! Her performance on The X Factor was unforgettable.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "MikaKarni_001",
+        "text": "Her journey from The X Factor to stardom is so inspiring. Love her authenticity.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Mika Karni",
+        "reply_to_text": "מיקה קרני היא אחת הזמרות הכי טובות בישראל. 'מגדרור' זה שיר שתמיד מרגש אותי.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "MikaKarni_002",
+        "text": "ההופעות שלה תמיד מלאות באנרגיה. מיקה קרני היא כוכבת אמיתית.",
+        "user_username": "nina_festival",
+        "artist_name": "Mika Karni",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "MikaKarni_002",
+        "text": "'Ad HaBoker' is such a beautiful song. Mika's voice is so powerful.",
+        "user_username": "coolgirl99",
+        "artist_name": "Mika Karni",
+        "reply_to_text": "ההופעות שלה תמיד מלאות באנרגיה. מיקה קרני היא כוכבת אמיתית.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "MikaKarni_003",
+        "text": "הקול שלה ב'מגדרור' פשוט עוצר נשימה. מיקה קרני היא גאווה ישראלית.",
+        "user_username": "hila_journalist",
+        "artist_name": "Mika Karni",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "YermiKaplan_001",
+        "text": "Yermi Kaplan's 'HaTishma Koli' is one of the most beautiful Israeli songs ever written. His voice is pure emotion.",
+        "user_username": "maya_vocal",
+        "artist_name": "Yermi Kaplan",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "YermiKaplan_001",
+        "text": "ירמי קפלן הוא אחד הזמרים הכי מרגשים בישראל. 'התשמע קולי' זה שיר שתמיד עושה לי דמעות.",
+        "user_username": "miriam_trad",
+        "artist_name": "Yermi Kaplan",
+        "reply_to_text": "Yermi Kaplan's 'HaTishma Koli' is one of the most beautiful Israeli songs ever written. His voice is pure emotion.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "YermiKaplan_001",
+        "text": "His performance at the 1974 Eurovision was iconic. Yermi brought Israeli music to the world stage.",
+        "user_username": "avi_radio",
+        "artist_name": "Yermi Kaplan",
+        "reply_to_text": "ירמי קפלן הוא אחד הזמרים הכי מרגשים בישראל. 'התשמע קולי' זה שיר שתמיד עושה לי דמעות.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "YermiKaplan_002",
+        "text": "הקול שלו ב'שיר אהבה פשוט' פשוט עוצר נשימה. ירמי קפלן הוא אגדה.",
+        "user_username": "rachel_gold",
+        "artist_name": "Yermi Kaplan",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "YermiKaplan_002",
+        "text": "His collaboration with Shmulik Kraus was pure magic. 'HaTishma Koli' will live forever.",
+        "user_username": "daniel_berg",
+        "artist_name": "Yermi Kaplan",
+        "reply_to_text": "הקול שלו ב'שיר אהבה פשוט' פשוט עוצר נשימה. ירמי קפלן הוא אגדה.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "YermiKaplan_003",
+        "text": "ההופעות שלו תמיד היו מלאות רגש. ירמי קפלן הוא חלק מההיסטוריה של המוזיקה הישראלית.",
+        "user_username": "hila_journalist",
+        "artist_name": "Yermi Kaplan",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "AmirDadon_001",
+        "text": "Amir Dadon's 'HaLev Sheli' is such a powerful song! His lyrics about love and loss are so relatable.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Amir Dadon",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "AmirDadon_001",
+        "text": "עמיר דדון תמיד מצליח לרגש אותי. 'הלב שלי' זה שיר שלא יוצא מהראש.",
+        "user_username": "yuval_sound",
+        "artist_name": "Amir Dadon",
+        "reply_to_text": "Amir Dadon's 'HaLev Sheli' is such a powerful song! His lyrics about love and loss are so relatable.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "AmirDadon_001",
+        "text": "His voice is so unique and emotional. Amir Dadon is one of Israel's best contemporary artists.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Amir Dadon",
+        "reply_to_text": "עמיר דדון תמיד מצליח לרגש אותי. 'הלב שלי' זה שיר שלא יוצא מהראש.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "AmirDadon_002",
+        "text": "האלבום 'הלב שלי' הוא יצירת מופת. עמיר דדון יודע לכתוב שירים שמדברים אל הלב.",
+        "user_username": "nina_festival",
+        "artist_name": "Amir Dadon",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "AmirDadon_002",
+        "text": "'Lo Yachol Lihyot' is my favorite song of his. Such beautiful lyrics!",
+        "user_username": "coolgirl99",
+        "artist_name": "Amir Dadon",
+        "reply_to_text": "האלבום 'הלב שלי' הוא יצירת מופת. עמיר דדון יודע לכתוב שירים שמדברים אל הלב.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "AmirDadon_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. עמיר דדון הוא זמר אמיתי.",
+        "user_username": "gabi_military",
+        "artist_name": "Amir Dadon",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "GuyMazig_001",
+        "text": "Guy Mazig's 'HaLev Sheli' is such a beautiful song! His voice is so pure and emotional.",
+        "user_username": "maya_vocal",
+        "artist_name": "Guy Mazig",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "GuyMazig_001",
+        "text": "גיא מזיג הוא אחד הזמרים הכי מוכשרים בדור שלנו. 'הלב שלי' זה שיר מדהים.",
+        "user_username": "amir_guitar",
+        "artist_name": "Guy Mazig",
+        "reply_to_text": "Guy Mazig's 'HaLev Sheli' is such a beautiful song! His voice is so pure and emotional.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "GuyMazig_001",
+        "text": "His performance on The Voice Israel was incredible. Guy has such natural talent!",
+        "user_username": "tamar_spotify",
+        "artist_name": "Guy Mazig",
+        "reply_to_text": "גיא מזיג הוא אחד הזמרים הכי מוכשרים בדור שלנו. 'הלב שלי' זה שיר מדהים.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "GuyMazig_002",
+        "text": "הקול שלו ב'הלב שלי' פשוט עוצר נשימה. גיא מזיג הוא כוכב עולה.",
+        "user_username": "hila_journalist",
+        "artist_name": "Guy Mazig",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "GuyMazig_002",
+        "text": "'Lo Yachol Lihyot' is such a powerful song. Guy's lyrics are so deep.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Guy Mazig",
+        "reply_to_text": "הקול שלו ב'הלב שלי' פשוט עוצר נשימה. גיא מזיג הוא כוכב עולה.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "GuyMazig_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. גיא מזיג הוא גאווה ישראלית.",
+        "user_username": "nina_festival",
+        "artist_name": "Guy Mazig",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "SharonHaziz_001",
+        "text": "Sharon Haziz's 'Kach Oti Sham' is a classic! Her voice is so powerful and emotional.",
+        "user_username": "miriam_trad",
+        "artist_name": "Sharon Haziz",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "SharonHaziz_001",
+        "text": "שרון חזיז היא אחת הזמרות הכי טובות בישראל. 'קח אותי לשם' זה שיר שתמיד מרגש אותי.",
+        "user_username": "avi_radio",
+        "artist_name": "Sharon Haziz",
+        "reply_to_text": "Sharon Haziz's 'Kach Oti Sham' is a classic! Her voice is so powerful and emotional.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "SharonHaziz_001",
+        "text": "Her collaboration with Shay Lahav was pure magic. Such beautiful songs together!",
+        "user_username": "yuval_sound",
+        "artist_name": "Sharon Haziz",
+        "reply_to_text": "שרון חזיז היא אחת הזמרות הכי טובות בישראל. 'קח אותי לשם' זה שיר שתמיד מרגש אותי.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "SharonHaziz_002",
+        "text": "האלבום 'קח אותי לשם' הוא יצירת מופת. שרון חזיז יודעת לרגש.",
+        "user_username": "rachel_gold",
+        "artist_name": "Sharon Haziz",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "SharonHaziz_002",
+        "text": "'HaLev Sheli' is such a beautiful song. Sharon's voice is so unique.",
+        "user_username": "coolgirl99",
+        "artist_name": "Sharon Haziz",
+        "reply_to_text": "האלבום 'קח אותי לשם' הוא יצירת מופת. שרון חזיז יודעת לרגש.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "SharonHaziz_003",
+        "text": "ההופעות שלה תמיד מלאות באנרגיה. שרון חזיז היא אגדה.",
+        "user_username": "gabi_military",
+        "artist_name": "Sharon Haziz",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "RonitShachar_001",
+        "text": "Ronit Shachar's voice is so beautiful! Her performance of 'HaTishma Koli' is unforgettable.",
+        "user_username": "maya_vocal",
+        "artist_name": "Ronit Shachar",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "RonitShachar_001",
+        "text": "רונית שחר היא אחת הזמרות הכי מוכשרות בישראל. 'התשמע קולי' זה שיר מדהים.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Ronit Shachar",
+        "reply_to_text": "Ronit Shachar's voice is so beautiful! Her performance of 'HaTishma Koli' is unforgettable.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "RonitShachar_001",
+        "text": "Her interpretation of classic Israeli songs is incredible. Ronit brings new life to old favorites.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Ronit Shachar",
+        "reply_to_text": "רונית שחר היא אחת הזמרות הכי מוכשרות בישראל. 'התשמע קולי' זה שיר מדהים.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "RonitShachar_002",
+        "text": "הקול שלה ב'שיר אהבה פשוט' פשוט עוצר נשימה. רונית שחר היא כוכבת אמיתית.",
+        "user_username": "nina_festival",
+        "artist_name": "Ronit Shachar",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "RonitShachar_002",
+        "text": "'HaLev Sheli' is such a powerful song. Ronit's voice is so emotional.",
+        "user_username": "hila_journalist",
+        "artist_name": "Ronit Shachar",
+        "reply_to_text": "הקול שלה ב'שיר אהבה פשוט' פשוט עוצר נשימה. רונית שחר היא כוכבת אמיתית.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "RonitShachar_003",
+        "text": "ההופעות שלה תמיד מלאות באנרגיה. רונית שחר היא גאווה ישראלית.",
+        "user_username": "gabi_military",
+        "artist_name": "Ronit Shachar",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "AvivGeffen_001",
+        "text": "Aviv Geffen's 'HaLev HaKavur' is a masterpiece! His lyrics about love and loss are so powerful.",
+        "user_username": "critic_alex",
+        "artist_name": "Aviv Geffen",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "AvivGeffen_001",
+        "text": "אביב גפן הוא אחד הזמרים הכי מרגשים בישראל. 'הלב הקבור' זה שיר שתמיד עושה לי דמעות.",
+        "user_username": "maya_vocal",
+        "artist_name": "Aviv Geffen",
+        "reply_to_text": "Aviv Geffen's 'HaLev HaKavur' is a masterpiece! His lyrics about love and loss are so powerful.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "AvivGeffen_001",
+        "text": "His collaboration with Steven Wilson on 'Blackfield' was incredible. Aviv brings Israeli rock to the world!",
+        "user_username": "tom_indie",
+        "artist_name": "Aviv Geffen",
+        "reply_to_text": "אביב גפן הוא אחד הזמרים הכי מרגשים בישראל. 'הלב הקבור' זה שיר שתמיד עושה לי דמעות.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "AvivGeffen_002",
+        "text": "האלבום 'הלב הקבור' הוא יצירת מופת. אביב גפן יודע לכתוב שירים שמדברים אל הלב.",
+        "user_username": "amir_guitar",
+        "artist_name": "Aviv Geffen",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "AvivGeffen_002",
+        "text": "'Yeled Shel Ahava' is such a beautiful song. Aviv's voice is so emotional.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Aviv Geffen",
+        "reply_to_text": "האלבום 'הלב הקבור' הוא יצירת מופת. אביב גפן יודע לכתוב שירים שמדברים אל הלב.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "AvivGeffen_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. אביב גפן הוא אגדה ברוק הישראלי.",
+        "user_username": "yuval_sound",
+        "artist_name": "Aviv Geffen",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EfratGosh_001",
+        "text": "Efrat Gosh's 'Shir Ahava Pashut' is one of the most played songs in Israel! Her voice is pure magic.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Efrat Gosh",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EfratGosh_001",
+        "text": "אפרת גוש היא אחת הזמרות הכי טובות בישראל. 'שיר אהבה פשוט' זה שיר שכל ישראלי מכיר.",
+        "user_username": "miriam_trad",
+        "artist_name": "Efrat Gosh",
+        "reply_to_text": "Efrat Gosh's 'Shir Ahava Pashut' is one of the most played songs in Israel! Her voice is pure magic.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "EfratGosh_001",
+        "text": "According to ACUM, 'Shir Ahava Pashut' was the most played song in Israel. Such an achievement!",
+        "user_username": "avi_radio",
+        "artist_name": "Efrat Gosh",
+        "reply_to_text": "אפרת גוש היא אחת הזמרות הכי טובות בישראל. 'שיר אהבה פשוט' זה שיר שכל ישראלי מכיר.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "EfratGosh_002",
+        "text": "הקול שלה ב'שיר אהבה פשוט' פשוט עוצר נשימה. אפרת גוש היא כוכבת אמיתית.",
+        "user_username": "nina_festival",
+        "artist_name": "Efrat Gosh",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EfratGosh_002",
+        "text": "'HaLev Sheli' is such a beautiful song. Efrat's voice is so unique and powerful.",
+        "user_username": "coolgirl99",
+        "artist_name": "Efrat Gosh",
+        "reply_to_text": "הקול שלה ב'שיר אהבה פשוט' פשוט עוצר נשימה. אפרת גוש היא כוכבת אמיתית.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "EfratGosh_003",
+        "text": "ההופעות שלה תמיד מלאות באנרגיה. אפרת גוש היא גאווה ישראלית.",
+        "user_username": "hila_journalist",
+        "artist_name": "Efrat Gosh",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "YoniBloch_001",
+        "text": "Yoni Bloch's 'HaLev Sheli' is such a powerful song! His lyrics about love and loss are so relatable.",
+        "user_username": "bookworm42",
+        "artist_name": "Yoni Bloch",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "YoniBloch_001",
+        "text": "יוני בלוך הוא אחד הזמרים הכי מוכשרים בישראל. 'הלב שלי' זה שיר שלא יוצא מהראש.",
+        "user_username": "yuval_sound",
+        "artist_name": "Yoni Bloch",
+        "reply_to_text": "Yoni Bloch's 'HaLev Sheli' is such a powerful song! His lyrics about love and loss are so relatable.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "YoniBloch_001",
+        "text": "His voice is so unique and emotional. Yoni Bloch is one of Israel's best contemporary artists.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Yoni Bloch",
+        "reply_to_text": "יוני בלוך הוא אחד הזמרים הכי מוכשרים בישראל. 'הלב שלי' זה שיר שלא יוצא מהראש.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "YoniBloch_002",
+        "text": "האלבום 'הלב שלי' הוא יצירת מופת. יוני בלוך יודע לכתוב שירים שמדברים אל הלב.",
+        "user_username": "gabi_military",
+        "artist_name": "Yoni Bloch",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "YoniBloch_002",
+        "text": "'Lo Yachol Lihyot' is my favorite song of his. Such beautiful lyrics!",
+        "user_username": "maya_vocal",
+        "artist_name": "Yoni Bloch",
+        "reply_to_text": "האלבום 'הלב שלי' הוא יצירת מופת. יוני בלוך יודע לכתוב שירים שמדברים אל הלב.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "YoniBloch_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. יוני בלוך הוא זמר אמיתי.",
+        "user_username": "rachel_gold",
+        "artist_name": "Yoni Bloch",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "IvriLider_001",
+        "text": "Ivri Lider's 'Bo' is a classic! His voice is so smooth and emotional.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Ivri Lider",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "IvriLider_001",
+        "text": "עברי לידר הוא אחד הזמרים הכי טובים בישראל. 'בוא' זה שיר שתמיד מרגש אותי.",
+        "user_username": "miriam_trad",
+        "artist_name": "Ivri Lider",
+        "reply_to_text": "עברי לידר הוא אחד הזמרים הכי טובים בישראל. 'בוא' זה שיר שתמיד מרגש אותי.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "IvriLider_001",
+        "text": "His performance on The X Factor Israel as a judge was amazing. Ivri is so knowledgeable about music!",
+        "user_username": "avi_radio",
+        "artist_name": "Ivri Lider",
+        "reply_to_text": "עברי לידר הוא אחד הזמרים הכי טובים בישראל. 'בוא' זה שיר שתמיד מרגש אותי.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "IvriLider_002",
+        "text": "הקול שלו ב'בוא' פשוט עוצר נשימה. עברי לידר הוא כוכב אמיתי.",
+        "user_username": "nina_festival",
+        "artist_name": "Ivri Lider",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "IvriLider_002",
+        "text": "'HaLev Sheli' is such a beautiful song. Ivri's voice is so unique.",
+        "user_username": "coolgirl99",
+        "artist_name": "Ivri Lider",
+        "reply_to_text": "הקול שלו ב'בוא' פשוט עוצר נשימה. עברי לידר הוא כוכב אמיתי.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "IvriLider_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. עברי לידר הוא גאווה ישראלית.",
+        "user_username": "hila_journalist",
+        "artist_name": "Ivri Lider",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "KerenPeles_001",
+        "text": "Keren Peles's 'HaLev Sheli' is such a beautiful song! Her voice is so pure and emotional.",
+        "user_username": "maya_vocal",
+        "artist_name": "Keren Peles",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "KerenPeles_001",
+        "text": "קרן פלס היא אחת הזמרות הכי מוכשרות בישראל. 'הלב שלי' זה שיר מדהים.",
+        "user_username": "amir_guitar",
+        "artist_name": "Keren Peles",
+        "reply_to_text": "Keren Peles's 'HaLev Sheli' is such a beautiful song! Her voice is so pure and emotional.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "KerenPeles_001",
+        "text": "Her performance on The Voice Israel was incredible. Keren has such natural talent!",
+        "user_username": "tamar_spotify",
+        "artist_name": "Keren Peles",
+        "reply_to_text": "קרן פלס היא אחת הזמרות הכי מוכשרות בישראל. 'הלב שלי' זה שיר מדהים.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "KerenPeles_002",
+        "text": "הקול שלה ב'הלב שלי' פשוט עוצר נשימה. קרן פלס היא כוכבת עולה.",
+        "user_username": "hila_journalist",
+        "artist_name": "Keren Peles",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "KerenPeles_002",
+        "text": "'Lo Yachol Lihyot' is such a powerful song. Keren's lyrics are so deep.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Keren Peles",
+        "reply_to_text": "הקול שלה ב'הלב שלי' פשוט עוצר נשימה. קרן פלס היא כוכבת עולה.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "KerenPeles_003",
+        "text": "ההופעות שלה תמיד מלאות באנרגיה. קרן פלס היא גאווה ישראלית.",
+        "user_username": "nina_festival",
+        "artist_name": "Keren Peles",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "DavidDOr_001",
+        "text": "David D'Or's voice is absolutely incredible! His countertenor range is mind-blowing.",
+        "user_username": "critic_alex",
+        "artist_name": "David D'Or",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "DavidDOr_001",
+        "text": "דוד ד'אור הוא אחד הזמרים הכי מוכשרים בישראל. הקול שלו פשוט עוצר נשימה.",
+        "user_username": "maya_vocal",
+        "artist_name": "David D'Or",
+        "reply_to_text": "David D'Or's voice is absolutely incredible! His countertenor range is mind-blowing.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "DavidDOr_001",
+        "text": "His performance at Eurovision 2004 was amazing. David's voice is truly unique in Israeli music!",
+        "user_username": "tom_indie",
+        "artist_name": "David D'Or",
+        "reply_to_text": "דוד ד'אור הוא אחד הזמרים הכי מוכשרים בישראל. הקול שלו פשוט עוצר נשימה.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "DavidDOr_002",
+        "text": "השיר 'הללויה' שלו פשוט מדהים. דוד ד'אור יודע לשיר כמו מלאך.",
+        "user_username": "amir_guitar",
+        "artist_name": "David D'Or",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "DavidDOr_002",
+        "text": "'Hallelujah' is such a powerful song. David's interpretation is beautiful.",
+        "user_username": "sophia_jazz",
+        "artist_name": "David D'Or",
+        "reply_to_text": "השיר 'הללויה' שלו פשוט מדהים. דוד ד'אור יודע לשיר כמו מלאך.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "DavidDOr_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. דוד ד'אור הוא גאווה ישראלית.",
+        "user_username": "yuval_sound",
+        "artist_name": "David D'Or",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EricBerman_001",
+        "text": "Eric Berman's 'HaLev Sheli' is such a beautiful song! His voice is so emotional.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Eric Berman",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EricBerman_001",
+        "text": "אריק ברמן הוא זמר מדהים. 'הלב שלי' זה שיר שתמיד מרגש אותי.",
+        "user_username": "miriam_trad",
+        "artist_name": "Eric Berman",
+        "reply_to_text": "Eric Berman's 'HaLev Sheli' is such a beautiful song! His voice is so emotional.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "EricBerman_001",
+        "text": "His performance on The Voice Israel was incredible. Eric has such natural talent!",
+        "user_username": "avi_radio",
+        "artist_name": "Eric Berman",
+        "reply_to_text": "אריק ברמן הוא זמר מדהים. 'הלב שלי' זה שיר שתמיד מרגש אותי.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "EricBerman_002",
+        "text": "הקול שלו ב'הלב שלי' פשוט עוצר נשימה. אריק ברמן הוא כוכב עולה.",
+        "user_username": "nina_festival",
+        "artist_name": "Eric Berman",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "EricBerman_002",
+        "text": "'Lo Yachol Lihyot' is such a powerful song. Eric's lyrics are so deep.",
+        "user_username": "coolgirl99",
+        "artist_name": "Eric Berman",
+        "reply_to_text": "הקול שלו ב'הלב שלי' פשוט עוצר נשימה. אריק ברמן הוא כוכב עולה.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "EricBerman_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. אריק ברמן הוא גאווה ישראלית.",
+        "user_username": "hila_journalist",
+        "artist_name": "Eric Berman",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "ElaiBotner_001",
+        "text": "Elai Botner's 'HaLev Sheli' is such a beautiful song! His voice is so pure.",
+        "user_username": "bookworm42",
+        "artist_name": "Elai Botner",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "ElaiBotner_001",
+        "text": "עלאי בוטנר הוא זמר מדהים. 'הלב שלי' זה שיר שתמיד מרגש אותי.",
+        "user_username": "yuval_sound",
+        "artist_name": "Elai Botner",
+        "reply_to_text": "Elai Botner's 'HaLev Sheli' is such a beautiful song! His voice is so pure.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "ElaiBotner_001",
+        "text": "His performance on The Voice Israel was amazing. Elai has such natural talent!",
+        "user_username": "sophia_jazz",
+        "artist_name": "Elai Botner",
+        "reply_to_text": "עלאי בוטנר הוא זמר מדהים. 'הלב שלי' זה שיר שתמיד מרגש אותי.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "ElaiBotner_002",
+        "text": "הקול שלו ב'הלב שלי' פשוט עוצר נשימה. עלאי בוטנר הוא כוכב עולה.",
+        "user_username": "gabi_military",
+        "artist_name": "Elai Botner",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "ElaiBotner_002",
+        "text": "'Lo Yachol Lihyot' is such a powerful song. Elai's lyrics are so deep.",
+        "user_username": "maya_vocal",
+        "artist_name": "Elai Botner",
+        "reply_to_text": "הקול שלו ב'הלב שלי' פשוט עוצר נשימה. עלאי בוטנר הוא כוכב עולה.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "ElaiBotner_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. עלאי בוטנר הוא גאווה ישראלית.",
+        "user_username": "rachel_gold",
+        "artist_name": "Elai Botner",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "GiladKahana_001",
+        "text": "Gilad Kahana's 'HaLev Sheli' is such a beautiful song! His voice is so emotional.",
+        "user_username": "tamar_spotify",
+        "artist_name": "Gilad Kahana",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "GiladKahana_001",
+        "text": "גלעד כהנא הוא זמר מדהים. 'הלב שלי' זה שיר שתמיד מרגש אותי.",
+        "user_username": "miriam_trad",
+        "artist_name": "Gilad Kahana",
+        "reply_to_text": "Gilad Kahana's 'HaLev Sheli' is such a beautiful song! His voice is so emotional.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "GiladKahana_001",
+        "text": "His performance on The Voice Israel was incredible. Gilad has such natural talent!",
+        "user_username": "avi_radio",
+        "artist_name": "Gilad Kahana",
+        "reply_to_text": "גלעד כהנא הוא זמר מדהים. 'הלב שלי' זה שיר שתמיד מרגש אותי.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "GiladKahana_002",
+        "text": "הקול שלו ב'הלב שלי' פשוט עוצר נשימה. גלעד כהנא הוא כוכב עולה.",
+        "user_username": "nina_festival",
+        "artist_name": "Gilad Kahana",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "GiladKahana_002",
+        "text": "'Lo Yachol Lihyot' is such a powerful song. Gilad's lyrics are so deep.",
+        "user_username": "coolgirl99",
+        "artist_name": "Gilad Kahana",
+        "reply_to_text": "הקול שלו ב'הלב שלי' פשוט עוצר נשימה. גלעד כהנא הוא כוכב עולה.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "GiladKahana_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. גלעד כהנא הוא גאווה ישראלית.",
+        "user_username": "hila_journalist",
+        "artist_name": "Gilad Kahana",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "OfferNissim_001",
+        "text": "Offer Nissim is the king of Israeli dance music! His remixes are legendary.",
+        "user_username": "critic_alex",
+        "artist_name": "Offer Nissim",
+        "reply_to_text": null,
+        "language": "en",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "OfferNissim_001",
+        "text": "עופר ניסים הוא מלך המוזיקה האלקטרונית בישראל. הרמיקסים שלו הם אגדה.",
+        "user_username": "maya_vocal",
+        "artist_name": "Offer Nissim",
+        "reply_to_text": "Offer Nissim is the king of Israeli dance music! His remixes are legendary.",
+        "language": "he",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "OfferNissim_001",
+        "text": "His remix of 'HaLev Sheli' is absolutely amazing! Offer knows how to make people dance.",
+        "user_username": "tom_indie",
+        "artist_name": "Offer Nissim",
+        "reply_to_text": "עופר ניסים הוא מלך המוזיקה האלקטרונית בישראל. הרמיקסים שלו הם אגדה.",
+        "language": "en",
+        "thread_position": 3
+    },
+    {
+        "thread_id": "OfferNissim_002",
+        "text": "הרמיקס שלו ל'הלב שלי' פשוט מדהים. עופר ניסים יודע איך להריץ אנשים.",
+        "user_username": "amir_guitar",
+        "artist_name": "Offer Nissim",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    },
+    {
+        "thread_id": "OfferNissim_002",
+        "text": "'Lo Yachol Lihyot' remix is fire! Offer's production skills are incredible.",
+        "user_username": "sophia_jazz",
+        "artist_name": "Offer Nissim",
+        "reply_to_text": "הרמיקס שלו ל'הלב שלי' פשוט מדהים. עופר ניסים יודע איך להריץ אנשים.",
+        "language": "en",
+        "thread_position": 2
+    },
+    {
+        "thread_id": "OfferNissim_003",
+        "text": "ההופעות שלו תמיד מלאות באנרגיה. עופר ניסים הוא גאווה ישראלית.",
+        "user_username": "yuval_sound",
+        "artist_name": "Offer Nissim",
+        "reply_to_text": null,
+        "language": "he",
+        "thread_position": 1
+    }
+]

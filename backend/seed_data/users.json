@@ -1,0 +1,572 @@
+[
+    {
+        "username": "magicmike55",
+        "email": "mike.johnson@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "coolgirl99",
+        "email": "sarah.williams@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "david_cohen",
+        "email": "david.cohen@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "techguru2023",
+        "email": "alex.tech@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "rachel_gold",
+        "email": "rachel.goldberg@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "gamingpro123",
+        "email": "jake.gamer@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "michael_rosen",
+        "email": "michael.rosen@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "bookworm42",
+        "email": "emma.reader@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "daniel_berg",
+        "email": "daniel.berg@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "fitness_freak",
+        "email": "lisa.fitness@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "yossi_kibbutz",
+        "email": "yossi.kibbutz@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "travelbug88",
+        "email": "anna.travel@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "tom_indie",
+        "email": "tom.indie@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "miriam_trad",
+        "email": "miriam.traditional@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "crypto_king",
+        "email": "ron.crypto@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "sophia_jazz",
+        "email": "sophia.jazz@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "critic_alex",
+        "email": "alex.critic@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "gabi_military",
+        "email": "gabi.military@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "nina_festival",
+        "email": "nina.festival@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "vinyl_eli",
+        "email": "eli.vinyl@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "tamar_spotify",
+        "email": "tamar.spotify@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "avi_radio",
+        "email": "avi.radio@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "dana_photo",
+        "email": "dana.photo@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "yaron_teacher",
+        "email": "yaron.teacher@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "shai_producer",
+        "email": "shai.producer@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "noa_lyrics",
+        "email": "noa.lyrics@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "amir_guitar",
+        "email": "amir.guitar@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "liron_drums",
+        "email": "liron.drums@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "oded_bass",
+        "email": "oded.bass@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "kfir_keys",
+        "email": "kfir.keys@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "maya_vocal",
+        "email": "maya.vocal@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "yuval_sound",
+        "email": "yuval.sound@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "hila_journalist",
+        "email": "hila.journalist@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "ziv_manager",
+        "email": "ziv.manager@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "gal_promoter",
+        "email": "gal.promoter@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "dror_store",
+        "email": "dror.store@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "moshe_repair",
+        "email": "moshe.repair@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "ruth_therapist",
+        "email": "ruth.therapist@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "esther_choir",
+        "email": "esther.choir@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "david_opera",
+        "email": "david.opera@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "yael_folk",
+        "email": "yael.folk@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "dan_jazz",
+        "email": "dan.jazz@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "rachel_piano",
+        "email": "rachel.piano@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "ben_rock",
+        "email": "ben.rock@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "lisa_pop",
+        "email": "lisa.pop@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "sam_hiphop",
+        "email": "sam.hiphop@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "max_electronic",
+        "email": "max.electronic@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "jessica_country",
+        "email": "jessica.country@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "mike_blues",
+        "email": "mike.blues@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "jamaica_reggae",
+        "email": "jamaica.reggae@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "zack_metal",
+        "email": "zack.metal@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "spike_punk",
+        "email": "spike.punk@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "gloria_disco",
+        "email": "gloria.disco@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "marvin_soul",
+        "email": "marvin.soul@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "james_funk",
+        "email": "james.funk@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "alicia_rnb",
+        "email": "alicia.rnb@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "mahalia_gospel",
+        "email": "mahalia.gospel@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "bill_bluegrass",
+        "email": "bill.bluegrass@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "seamus_celtic",
+        "email": "seamus.celtic@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "carlos_flamenco",
+        "email": "carlos.flamenco@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "maria_salsa",
+        "email": "maria.salsa@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "jorge_tango",
+        "email": "jorge.tango@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "joao_bossa",
+        "email": "joao.bossa@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "fela_afrobeat",
+        "email": "fela.afrobeat@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "jin_kpop",
+        "email": "jin.kpop@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "yuki_jpop",
+        "email": "yuki.jpop@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "priya_bollywood",
+        "email": "priya.bollywood@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "ahmed_arabic",
+        "email": "ahmed.arabic@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "mehmet_turkish",
+        "email": "mehmet.turkish@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "liorlevi77",
+        "email": "lior.levi@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "noamshalev",
+        "email": "noam.shalev@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "shiranb",
+        "email": "shiran.ben@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "itzikmizrahi",
+        "email": "itzik.mizrahi@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "ronenb",
+        "email": "ronen.ben@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "yaelsh",
+        "email": "yael.shalev@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "avivcohen",
+        "email": "aviv.cohen@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "matanlev",
+        "email": "matan.lev@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "tamarb",
+        "email": "tamar.ben@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "shlomitd",
+        "email": "shlomit.dan@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "erezg",
+        "email": "erez.golan@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "galitk",
+        "email": "galit.katz@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "yafitb",
+        "email": "yafit.ben@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "ilanitp",
+        "email": "ilanit.peretz@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "doritz",
+        "email": "dorit.ziv@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "shakedl",
+        "email": "shaked.levi@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "barakm",
+        "email": "barak.mor@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "talsh",
+        "email": "tal.shalev@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "maayanr",
+        "email": "maayan.rosen@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "omerb",
+        "email": "omer.ben@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "liatg",
+        "email": "liat.golan@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "shiranlev",
+        "email": "shiran.lev@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "yardenb",
+        "email": "yarden.ben@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "noamg",
+        "email": "noam.golan@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "shlomitk",
+        "email": "shlomit.katz@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    },
+    {
+        "username": "erezlev",
+        "email": "erez.lev@email.com",
+        "password": "$2b$10$u1Q9v8JkLz3e4F5gH6i7jO8pQ9rS0tU1vW2xY3zA4bC5dE6fG7hI8",
+        "isAdmin": false
+    }
+]
