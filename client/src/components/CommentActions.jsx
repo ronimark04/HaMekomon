@@ -8,6 +8,7 @@ import { useAuth } from '@/context/authContext';
 import { addToast, Button } from "@heroui/react";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const ICON_COLOR = "#A15E0A";
 const ICON_HOVER_COLOR = "#C1873B";
@@ -111,7 +112,7 @@ export default function CommentActions({ commentId, onReplyClick, isReplying, on
             return;
         }
         try {
-            const voteUrl = `/comment-votes/${commentId}/${voteType}`;
+            const voteUrl = `${backendUrl}/comment-votes/${commentId}/${voteType}`;
             const response = await fetch(voteUrl, {
                 method: 'POST',
                 headers: {

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useLanguage } from '@/context/languageContext';
 import { useAuth } from '@/context/authContext';
 import { useNavigate } from 'react-router-dom';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const DeleteAccountModal = ({ isOpen, onClose }) => {
     const { language } = useLanguage();
@@ -28,7 +29,7 @@ const DeleteAccountModal = ({ isOpen, onClose }) => {
         }
 
         try {
-            const response = await fetch(`/users/${user._id}`, {
+            const response = await fetch(`${backendUrl}/users/${user._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

@@ -6,6 +6,7 @@ import { addToast, Button } from "@heroui/react";
 import { motion } from "framer-motion";
 import { useNavigate } from 'react-router-dom';
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const ICON_COLOR = "#C1873B";
 const ICON_HOVER_COLOR = "#A15E0A";
 
@@ -38,7 +39,7 @@ export default function ArtistActionsArtistPage({ artistId }) {
         const fetchData = async () => {
             try {
                 // Fetch votes
-                const votesResponse = await fetch(`/artist-votes/artist/${artistId}`, {
+                const votesResponse = await fetch(`${backendUrl}/artist-votes/artist/${artistId}`, {
                     headers: {
                         'x-auth-token': localStorage.getItem('token')
                     }
@@ -86,7 +87,7 @@ export default function ArtistActionsArtistPage({ artistId }) {
         }
 
         try {
-            const voteUrl = `/artist-votes/${artistId}/${voteType}`;
+            const voteUrl = `${backendUrl}/artist-votes/${artistId}/${voteType}`;
             const response = await fetch(voteUrl, {
                 method: 'POST',
                 headers: {
@@ -100,7 +101,7 @@ export default function ArtistActionsArtistPage({ artistId }) {
             }
 
             // Fetch updated vote counts
-            const votesUrl = `/artist-votes/artist/${artistId}`;
+            const votesUrl = `${backendUrl}/artist-votes/artist/${artistId}`;
             const votesResponse = await fetch(votesUrl, {
                 headers: {
                     'x-auth-token': localStorage.getItem('token')

@@ -10,6 +10,7 @@ import {
 } from "@heroui/react";
 import { useLanguage } from '../context/languageContext';
 import { addToast } from "@heroui/react";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const DeleteArtistModal = ({ artist, isOpen, onClose, onSuccess }) => {
     const { language } = useLanguage();
@@ -28,7 +29,7 @@ const DeleteArtistModal = ({ artist, isOpen, onClose, onSuccess }) => {
 
         setLoading(true);
         try {
-            const response = await fetch(`/artists/${artist._id}`, {
+            const response = await fetch(`${backendUrl}/artists/${artist._id}`, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',

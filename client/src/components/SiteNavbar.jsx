@@ -17,6 +17,7 @@ import { useState, useRef, useEffect } from "react";
 import homeIcon from "../assets/home-icon-text.png";
 import burgerMenuIcon from "../assets/burger-menu.png";
 import { motion } from 'framer-motion';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const SearchIcon = ({ size = 24, strokeWidth = 1.5, width, height, ...props }) => (
   <svg
@@ -91,7 +92,7 @@ export default function SiteNavbar() {
     if (allArtists.length === 0 && !loadingArtists) {
       setLoadingArtists(true);
       try {
-        const response = await fetch('/artists');
+        const response = await fetch(`${backendUrl}/artists`);
         if (response.ok) {
           const artists = await response.json();
           setAllArtists(artists);
@@ -211,7 +212,7 @@ export default function SiteNavbar() {
     if (artists.length === 0 && !loadingArtists) {
       setLoadingArtists(true);
       try {
-        const response = await fetch('/artists');
+        const response = await fetch(`${backendUrl}/artists`);
         if (response.ok) {
           artists = await response.json();
           setAllArtists(artists);
@@ -234,7 +235,7 @@ export default function SiteNavbar() {
     const handleArtistListUpdated = async () => {
       setLoadingArtists(true);
       try {
-        const response = await fetch('/artists');
+        const response = await fetch(`${backendUrl}/artists`);
         if (response.ok) {
           const artists = await response.json();
           setAllArtists(artists);

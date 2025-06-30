@@ -11,6 +11,8 @@ import { Avatar, Spinner, addToast, Button } from "@heroui/react";
 import LikeIcon from '../assets/like-1385-svgrepo-com.svg?react';
 import DislikeIcon from '../assets/dislike-1387-svgrepo-com.svg?react';
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 // Helper function to detect if text is mainly Hebrew
 function isMainlyHebrew(text) {
     if (!text) return false;
@@ -61,17 +63,17 @@ const ProfilePage = () => {
             setLoading(true);
             try {
                 // Fetch user profile
-                const userRes = await fetch(`/users/${userId}`);
+                const userRes = await fetch(`${backendUrl}/users/${userId}`);
                 const userData = await userRes.json();
                 setProfileUser(userData);
 
                 // Fetch user's votes
-                const votesRes = await fetch(`/artist-votes/user/${userId}`);
+                const votesRes = await fetch(`${backendUrl}/artist-votes/user/${userId}`);
                 const votesData = await votesRes.json();
 
                 // Fetch liked artists
                 const likedArtistsPromises = votesData.upvotes.map(async (artistId) => {
-                    const res = await fetch(`/artists/${artistId}`);
+                    const res = await fetch(`${backendUrl}/artists/${artistId}`);
                     return res.json();
                 });
                 const likedArtistsData = await Promise.all(likedArtistsPromises);
@@ -79,24 +81,24 @@ const ProfilePage = () => {
 
                 // Fetch disliked artists
                 const dislikedArtistsPromises = votesData.downvotes.map(async (artistId) => {
-                    const res = await fetch(`/artists/${artistId}`);
+                    const res = await fetch(`${backendUrl}/artists/${artistId}`);
                     return res.json();
                 });
                 const dislikedArtistsData = await Promise.all(dislikedArtistsPromises);
                 setDislikedArtists(dislikedArtistsData);
 
                 // Fetch user's comments
-                const commentsRes = await fetch(`/comments/user/${userId}`);
+                const commentsRes = await fetch(`${backendUrl}/comments/user/${userId}`);
                 const commentsData = await commentsRes.json();
                 setComments(commentsData);
 
                 // Fetch user's liked comments
-                const commentVotesRes = await fetch(`/comment-votes/user/${userId}`);
+                const commentVotesRes = await fetch(`${backendUrl}/comment-votes/user/${userId}`);
                 const commentVotesData = await commentVotesRes.json();
 
                 // Fetch liked comments
                 const likedCommentsPromises = commentVotesData.upvotes.map(async (commentId) => {
-                    const res = await fetch(`/comments/${commentId}`);
+                    const res = await fetch(`${backendUrl}/comments/${commentId}`);
                     return res.json();
                 });
                 const likedCommentsData = await Promise.all(likedCommentsPromises);
@@ -104,7 +106,7 @@ const ProfilePage = () => {
 
                 // Fetch disliked comments
                 const dislikedCommentsPromises = commentVotesData.downvotes.map(async (commentId) => {
-                    const res = await fetch(`/comments/${commentId}`);
+                    const res = await fetch(`${backendUrl}/comments/${commentId}`);
                     return res.json();
                 });
                 const dislikedCommentsData = await Promise.all(dislikedCommentsPromises);
@@ -118,7 +120,7 @@ const ProfilePage = () => {
 
                 const uniqueReplyToIds = [...new Set(replyToIds)];
                 const replyToCommentsPromises = uniqueReplyToIds.map(async (commentId) => {
-                    const res = await fetch(`/comments/${commentId}`);
+                    const res = await fetch(`${backendUrl}/comments/${commentId}`);
                     return res.json();
                 });
                 const replyToCommentsData = await Promise.all(replyToCommentsPromises);
@@ -141,17 +143,17 @@ const ProfilePage = () => {
     // Helper to refresh all comment-related states
     const refreshAllComments = async () => {
         // Fetch user's comments
-        const commentsRes = await fetch(`/comments/user/${userId}`);
+        const commentsRes = await fetch(`${backendUrl}/comments/user/${userId}`);
         const commentsData = await commentsRes.json();
         setComments(commentsData);
 
         // Fetch user's liked/disliked comments
-        const commentVotesRes = await fetch(`/comment-votes/user/${userId}`);
+        const commentVotesRes = await fetch(`${backendUrl}/comment-votes/user/${userId}`);
         const commentVotesData = await commentVotesRes.json();
 
         // Fetch liked comments
         const likedCommentsPromises = commentVotesData.upvotes.map(async (commentId) => {
-            const res = await fetch(`/comments/${commentId}`);
+            const res = await fetch(`${backendUrl}/comments/${commentId}`);
             return res.json();
         });
         const likedCommentsData = await Promise.all(likedCommentsPromises);
@@ -159,7 +161,7 @@ const ProfilePage = () => {
 
         // Fetch disliked comments
         const dislikedCommentsPromises = commentVotesData.downvotes.map(async (commentId) => {
-            const res = await fetch(`/comments/${commentId}`);
+            const res = await fetch(`${backendUrl}/comments/${commentId}`);
             return res.json();
         });
         const dislikedCommentsData = await Promise.all(dislikedCommentsPromises);
@@ -172,7 +174,7 @@ const ProfilePage = () => {
             .map(comment => comment.reply_to);
         const uniqueReplyToIds = [...new Set(replyToIds)];
         const replyToCommentsPromises = uniqueReplyToIds.map(async (commentId) => {
-            const res = await fetch(`/comments/${commentId}`);
+            const res = await fetch(`${backendUrl}/comments/${commentId}`);
             return res.json();
         });
         const replyToCommentsData = await Promise.all(replyToCommentsPromises);
@@ -185,7 +187,7 @@ const ProfilePage = () => {
 
     const handleEdit = async (commentId) => {
         if (!editText.trim()) return;
-        const res = await fetch(`/comments/${commentId}`, {
+        const res = await fetch(`${backendUrl}/comments/${commentId}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -215,7 +217,7 @@ const ProfilePage = () => {
                     color="danger"
                     onPress={async () => {
                         // Proceed with deletion
-                        const res = await fetch(`/comments/${commentId}`, {
+                        const res = await fetch(`${backendUrl}/comments/${commentId}`, {
                             method: 'DELETE',
                             headers: {
                                 'x-auth-token': localStorage.getItem('token'),
@@ -236,12 +238,12 @@ const ProfilePage = () => {
     const handleVoteChange = async (commentId, voteType) => {
         // Refresh the liked and disliked comments sections
         try {
-            const commentVotesRes = await fetch(`/comment-votes/user/${userId}`);
+            const commentVotesRes = await fetch(`${backendUrl}/comment-votes/user/${userId}`);
             const commentVotesData = await commentVotesRes.json();
 
             // Fetch liked comments
             const likedCommentsPromises = commentVotesData.upvotes.map(async (commentId) => {
-                const res = await fetch(`/comments/${commentId}`);
+                const res = await fetch(`${backendUrl}/comments/${commentId}`);
                 return res.json();
             });
             const likedCommentsData = await Promise.all(likedCommentsPromises);
@@ -249,7 +251,7 @@ const ProfilePage = () => {
 
             // Fetch disliked comments
             const dislikedCommentsPromises = commentVotesData.downvotes.map(async (commentId) => {
-                const res = await fetch(`/comments/${commentId}`);
+                const res = await fetch(`${backendUrl}/comments/${commentId}`);
                 return res.json();
             });
             const dislikedCommentsData = await Promise.all(dislikedCommentsPromises);
@@ -265,7 +267,7 @@ const ProfilePage = () => {
         const artistIds = Array.from(new Set(allComments.map(c => c.artist).filter(Boolean)));
         const missingIds = artistIds.filter(id => !artistNamesById[id] || !artistNamesByIdEng[id]);
         if (missingIds.length > 0) {
-            Promise.all(missingIds.map(id => fetch(`/artists/${id}`).then(res => res.json()))).then(artists => {
+            Promise.all(missingIds.map(id => fetch(`${backendUrl}/artists/${id}`).then(res => res.json()))).then(artists => {
                 const newNames = {};
                 const newNamesEng = {};
                 artists.forEach(artist => {

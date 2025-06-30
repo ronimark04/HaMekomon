@@ -7,6 +7,7 @@ import { useAuth } from '@/context/authContext';
 import { addToast, Button } from "@heroui/react";
 import { motion } from "framer-motion";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const ICON_COLOR = "#C1873B";
 const ICON_HOVER_COLOR = "#A15E0A";
 
@@ -51,7 +52,7 @@ export default function ArtistActions({
             try {
                 console.log('Fetching data for artist:', artistId);
 
-                const votesResponse = await fetch(`/artist-votes/artist/${artistId}`, {
+                const votesResponse = await fetch(`${backendUrl}/artist-votes/artist/${artistId}`, {
                     headers: { 'x-auth-token': localStorage.getItem('token') }
                 });
                 if (!votesResponse.ok) throw new Error('Failed to fetch votes');
@@ -64,7 +65,7 @@ export default function ArtistActions({
                     setDisliked(votesData.downvotes.users.includes(user._id));
                 }
 
-                const commentsResponse = await fetch(`/comments/artist/${artistId}`, {
+                const commentsResponse = await fetch(`${backendUrl}/comments/artist/${artistId}`, {
                     headers: { 'x-auth-token': localStorage.getItem('token') }
                 });
                 if (!commentsResponse.ok) throw new Error('Failed to fetch comments');
@@ -103,7 +104,7 @@ export default function ArtistActions({
         }
 
         try {
-            const voteUrl = `/artist-votes/${artistId}/${voteType}`;
+            const voteUrl = `${backendUrl}/artist-votes/${artistId}/${voteType}`;
             const response = await fetch(voteUrl, {
                 method: 'POST',
                 headers: {
@@ -114,7 +115,7 @@ export default function ArtistActions({
 
             if (!response.ok) throw new Error('Failed to vote');
 
-            const votesResponse = await fetch(`/artist-votes/artist/${artistId}`, {
+            const votesResponse = await fetch(`${backendUrl}/artist-votes/artist/${artistId}`, {
                 headers: { 'x-auth-token': localStorage.getItem('token') }
             });
             if (!votesResponse.ok) throw new Error('Failed to fetch updated votes');

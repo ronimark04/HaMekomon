@@ -14,6 +14,8 @@ import { Spinner, addToast, Button } from '@heroui/react';
 const ICON_COLOR = "#A15E0A";
 const ICON_HOVER_COLOR = "#C1873B";
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 // Helper function to detect if text is mainly Hebrew
 function isMainlyHebrew(text) {
     if (!text) return false;
@@ -109,7 +111,7 @@ function CommentThread({ comment, usersById, depth = 0, replyingToCommentId, set
 
     const handleEdit = async () => {
         if (!editText.trim()) return;
-        const res = await fetch(`/comments/${comment._id}`, {
+        const res = await fetch(`${backendUrl}/comments/${comment._id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -138,7 +140,7 @@ function CommentThread({ comment, usersById, depth = 0, replyingToCommentId, set
                     color="danger"
                     onPress={async () => {
                         // Proceed with deletion
-                        const res = await fetch(`/comments/${comment._id}`, {
+                        const res = await fetch(`${backendUrl}/comments/${comment._id}`, {
                             method: 'DELETE',
                             headers: {
                                 'x-auth-token': localStorage.getItem('token'),
@@ -255,7 +257,7 @@ function CommentThread({ comment, usersById, depth = 0, replyingToCommentId, set
                         onChange={e => setReplyText(e.target.value)}
                         onSubmit={async () => {
                             if (!replyText.trim()) return;
-                            const res = await fetch('/comments', {
+                            const res = await fetch(`${backendUrl}/comments`, {
                                 method: 'POST',
                                 headers: {
                                     'Content-Type': 'application/json',
@@ -343,11 +345,11 @@ const ArtistPage = () => {
             setLoading(true);
             try {
                 // Fetch artist
-                const artistRes = await fetch(`/artists/${artistId}`);
+                const artistRes = await fetch(`${backendUrl}/artists/${artistId}`);
                 const artistData = await artistRes.json();
                 setArtist(artistData);
                 // Fetch comments
-                const commentsRes = await fetch(`/comments/artist/${artistId}`);
+                const commentsRes = await fetch(`${backendUrl}/comments/artist/${artistId}`);
                 const commentsData = await commentsRes.json();
                 setComments(commentsData);
                 // Fetch users for comments
@@ -355,7 +357,7 @@ const ArtistPage = () => {
                 const usersMap = {};
                 await Promise.all(userIds.map(async (uid) => {
                     try {
-                        const res = await fetch(`/users/${uid}`);
+                        const res = await fetch(`${backendUrl}/users/${uid}`);
                         if (res.ok) {
                             const u = await res.json();
                             usersMap[uid] = u;
@@ -374,7 +376,7 @@ const ArtistPage = () => {
     useEffect(() => {
         async function fetchAreas() {
             try {
-                const areasRes = await fetch('/areas');
+                const areasRes = await fetch(`${backendUrl}/areas`);
                 const areasData = await areasRes.json();
                 setAreas(areasData);
             } catch (error) {
@@ -388,7 +390,7 @@ const ArtistPage = () => {
 
     // Add a function to refresh comments
     const refreshComments = async () => {
-        const commentsRes = await fetch(`/comments/artist/${artistId}`);
+        const commentsRes = await fetch(`${backendUrl}/comments/artist/${artistId}`);
         const commentsData = await commentsRes.json();
         setComments(commentsData);
         // Optionally update usersById if new users appear
@@ -396,7 +398,7 @@ const ArtistPage = () => {
         const usersMap = {};
         await Promise.all(userIds.map(async (uid) => {
             try {
-                const res = await fetch(`/users/${uid}`);
+                const res = await fetch(`${backendUrl}/users/${uid}`);
                 if (res.ok) {
                     const u = await res.json();
                     usersMap[uid] = u;
@@ -409,7 +411,7 @@ const ArtistPage = () => {
     // Function to refresh artist data after update
     const refreshArtist = async () => {
         try {
-            const artistRes = await fetch(`/artists/${artistId}`);
+            const artistRes = await fetch(`${backendUrl}/artists/${artistId}`);
             const artistData = await artistRes.json();
             setArtist(artistData);
         } catch (error) {
@@ -538,7 +540,7 @@ const ArtistPage = () => {
                                     onChange={e => setNewCommentText(e.target.value)}
                                     onSubmit={async () => {
                                         if (!newCommentText.trim()) return;
-                                        const res = await fetch('/comments', {
+                                        const res = await fetch(`${backendUrl}/comments`, {
                                             method: 'POST',
                                             headers: {
                                                 'Content-Type': 'application/json',

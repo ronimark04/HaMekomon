@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useLanguage } from '@/context/languageContext';
 import { useAuth } from '@/context/authContext';
 
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 const ChangePasswordModal = ({ isOpen, onClose, onSuccess }) => {
     const { language } = useLanguage();
     const { user } = useAuth();
@@ -66,7 +68,7 @@ const ChangePasswordModal = ({ isOpen, onClose, onSuccess }) => {
         }
 
         try {
-            const response = await fetch(`/users/${user._id}/change-password`, {
+            const response = await fetch(`${backendUrl}/users/${user._id}/change-password`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -16,6 +16,8 @@ export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(localStorage.getItem('token'));
     const [loading, setLoading] = useState(true);
 
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
     useEffect(() => {
         // Check if there's a token in localStorage on initial load
         const storedToken = localStorage.getItem('token');
@@ -29,7 +31,7 @@ export const AuthProvider = ({ children }) => {
 
     const login = async (email, password) => {
         try {
-            const response = await fetch('/users/login', {
+            const response = await fetch(`${backendUrl}/users/login`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -75,7 +77,7 @@ export const AuthProvider = ({ children }) => {
     const register = async (userData) => {
         try {
             console.log('Attempting registration with:', userData);
-            const response = await fetch('/users', {
+            const response = await fetch(`${backendUrl}/users`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

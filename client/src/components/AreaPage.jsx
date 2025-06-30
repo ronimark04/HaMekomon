@@ -94,13 +94,15 @@ const AreaPage = () => {
         };
     }, []);
 
+    const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
     useEffect(() => {
         const fetchData = async () => {
             try {
                 setLoading(true);
                 setError(null);
 
-                const response = await fetch(`/areas/area/${areaName}`);
+                const response = await fetch(`${backendUrl}/areas/area/${areaName}`);
                 if (!response.ok) {
                     if (response.status === 404) {
                         throw new Error(`Area not found. Please check the name and try again.`);
@@ -119,7 +121,7 @@ const AreaPage = () => {
         };
 
         fetchData();
-    }, [areaName]);
+    }, [areaName, backendUrl]);
 
     if (loading) {
         return (

@@ -40,6 +40,7 @@ import AddArtistModal from './AddArtistModal';
 import UpdateArtistModal from './UpdateArtistModal';
 import DeleteUserModal from './DeleteUserModal';
 import DeleteArtistModal from './DeleteArtistModal';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const AdminPanel = () => {
     const { user } = useAuth();
@@ -88,7 +89,9 @@ const AdminPanel = () => {
     const fetchUsers = async () => {
         setLoadingUsers(true);
         try {
-            const response = await fetch('/users', {
+
+
+            const response = await fetch(`${backendUrl}/users`, {
                 headers: {
                     'x-auth-token': localStorage.getItem('token')
                 }
@@ -109,7 +112,7 @@ const AdminPanel = () => {
     const fetchArtists = async () => {
         setLoadingArtists(true);
         try {
-            const response = await fetch('/artists');
+            const response = await fetch(`${backendUrl}/artists`);
             if (response.ok) {
                 const data = await response.json();
                 setArtists(data);
@@ -127,7 +130,7 @@ const AdminPanel = () => {
         setLoadingAreas(true);
         try {
             console.log('Fetching areas...'); // Debug log
-            const response = await fetch('/areas');
+            const response = await fetch(`${backendUrl}/areas`);
             console.log('Areas response status:', response.status); // Debug log
             if (response.ok) {
                 const data = await response.json();
@@ -225,7 +228,7 @@ const AdminPanel = () => {
     // Handle user admin status toggle
     const handleToggleAdmin = async (userId, newAdminStatus) => {
         try {
-            const response = await fetch(`/users/${userId}`, {
+            const response = await fetch(`${backendUrl}/users/${userId}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

@@ -17,6 +17,7 @@ import {
 } from "@heroui/react";
 import { useLanguage } from '../context/languageContext';
 import { addToast } from "@heroui/react";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const AddArtistModal = ({ isOpen, onClose, onSuccess, areas }) => {
     const { language } = useLanguage();
@@ -156,7 +157,7 @@ const AddArtistModal = ({ isOpen, onClose, onSuccess, areas }) => {
                 delete submitData.bornElsewhere;
             }
 
-            const response = await fetch('/artists', {
+            const response = await fetch(`${backendUrl}/artists`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

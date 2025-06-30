@@ -17,6 +17,7 @@ import {
 } from "@heroui/react";
 import { useLanguage } from '../context/languageContext';
 import { addToast } from "@heroui/react";
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 const UpdateArtistModal = ({ artist, isOpen, onClose, onSuccess, areas }) => {
     const { language } = useLanguage();
@@ -206,7 +207,7 @@ const UpdateArtistModal = ({ artist, isOpen, onClose, onSuccess, areas }) => {
                 'x-auth-token': token
             });
 
-            const response = await fetch(`/artists/${artist._id}`, {
+            const response = await fetch(`${backendUrl}/artists/${artist._id}`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
