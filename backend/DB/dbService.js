@@ -11,6 +11,9 @@ const connectToDB = async () => {
     if (ENVIRONMENT === "production") {
         await connectToAtlasDB();
     }
+    if (!ENVIRONMENT) {
+        throw new Error("NODE_ENV is not set");
+    }
 };
 
 module.exports = connectToDB;

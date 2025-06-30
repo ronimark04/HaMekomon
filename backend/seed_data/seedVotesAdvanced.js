@@ -197,12 +197,6 @@ async function generateVotes() {
             console.log(`Errors: ${artistResults.totalErrors} artist votes, ${commentResults.totalErrors} comment votes`);
         }
 
-        // Show some sample statistics
-        const artistsWithVotes = await ArtistVote.distinct('artist');
-        const commentsWithVotes = await CommentVote.distinct('comment');
-        console.log(`Artists with votes: ${artistsWithVotes.length}/${artists.length} (${((artistsWithVotes.length / artists.length) * 100).toFixed(1)}%)`);
-        console.log(`Comments with votes: ${commentsWithVotes.length}/${comments.length} (${((commentsWithVotes.length / comments.length) * 100).toFixed(1)}%)`);
-
     } catch (error) {
         console.error("Vote seeding failed:", error.message);
         throw error;
