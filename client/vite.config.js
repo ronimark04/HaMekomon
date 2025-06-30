@@ -4,7 +4,7 @@ import path from 'path'
 import svgr from 'vite-plugin-svgr'
 
 const backendPort = process.env.VITE_BACKEND_PORT || '8181';
-const backendTarget = `http://localhost:${backendPort}`;
+const backendTarget = process.env.VITE_BACKEND_URL || `http://localhost:${backendPort}`;
 
 export default defineConfig({
     plugins: [react(), svgr()],
