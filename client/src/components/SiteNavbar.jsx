@@ -8,7 +8,7 @@ import {
   Input,
   useDisclosure,
 } from "@heroui/react";
-import { useNavigate } from "react-router-dom";
+import { Link as RouterLink, useNavigate } from "react-router-dom";
 import LanguageSwitch from "./LanguageSwitch";
 import LoginModal from "./LoginModal";
 import { useAuth } from "../context/authContext";
@@ -273,28 +273,28 @@ export default function SiteNavbar() {
               {burgerOpen && (
                 <div className="absolute -left-6 mt-1 w-44 bg-white dark:bg-zinc-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-[9999] flex flex-col py-2" dir={language === 'heb' ? 'rtl' : 'ltr'}>
                   {isAuthenticated && user && (
-                    <Link
-                      href={`/users/${user._id}`}
+                    <RouterLink
+                      to={`/user/${user._id}`}
                       className="px-4 py-2 font-normal text-red-700 hover:text-red-600 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded"
                     >
                       {profileText}
-                    </Link>
+                    </RouterLink>
                   )}
                   {isAuthenticated && user && user.isAdmin && (
-                    <Link
-                      href="/admin"
+                    <RouterLink
+                      to="/admin"
                       className="px-4 py-2 font-normal text-red-700 hover:text-red-600 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded"
                     >
                       {adminPanelText}
-                    </Link>
+                    </RouterLink>
                   )}
                   {isAuthenticated && (
-                    <Link
-                      href="/contact"
+                    <RouterLink
+                      to="/contact"
                       className="px-4 py-2 font-normal text-red-700 hover:text-red-600 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded"
                     >
                       {language === "heb" ? "צור קשר" : "Contact"}
-                    </Link>
+                    </RouterLink>
                   )}
                   {!isAuthenticated && (
                     <>
@@ -309,9 +309,9 @@ export default function SiteNavbar() {
                         {loginText}
                       </Button>
                       <Button
-                        as={Link}
+                        as={RouterLink}
                         color="primary"
-                        href="/signup"
+                        to="/signup"
                         variant="flat"
                         className="w-full justify-start px-4 py-2 font-normal text-blue-700 hover:text-blue-600 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded bg-transparent"
                       >
@@ -334,26 +334,27 @@ export default function SiteNavbar() {
                 </div>
               )}
             </div>
-            <Link href="/">
+            <RouterLink to="/">
               <img src={homeIcon} alt="Home" style={{ width: 36 }} />
-            </Link>
+            </RouterLink>
             {/* Desktop links (hidden on mobile) */}
             <div className="hidden md:flex items-center gap-4">
               {isAuthenticated && user && (
-                <Link href={`/users/${user._id}`}
+                <RouterLink
+                  to={`/user/${user._id}`}
                   className="font-normal text-red-700 hover:text-red-600"
                 >
                   {profileText}
-                </Link>
+                </RouterLink>
               )}
               {isAuthenticated && user && user.isAdmin && (
-                <Link href="/admin" className="font-normal text-red-700 hover:text-red-600">
+                <RouterLink to="/admin" className="font-normal text-red-700 hover:text-red-600">
                   {adminPanelText}
-                </Link>
+                </RouterLink>
               )}
-              <Link href="/contact" className="font-normal text-red-700 hover:text-red-600">
+              <RouterLink to="/contact" className="font-normal text-red-700 hover:text-red-600">
                 {language === "heb" ? "צור קשר" : "Contact"}
-              </Link>
+              </RouterLink>
             </div>
           </div>
 
@@ -439,7 +440,7 @@ export default function SiteNavbar() {
                   >
                     {loginText}
                   </Button>
-                  <Button as={Link} color="primary" href="/signup" variant="flat">
+                  <Button as={RouterLink} color="primary" to="/signup" variant="flat">
                     {signupText}
                   </Button>
                 </>

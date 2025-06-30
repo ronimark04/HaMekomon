@@ -172,7 +172,7 @@ function CommentThread({ comment, usersById, depth = 0, replyingToCommentId, set
         }}>
             <div style={{ fontWeight: 600, fontSize: 15, marginBottom: 4 }}>
                 <Link
-                    to={`/users/${comment.user}`}
+                    to={`/user/${comment.user}`}
                     style={{
                         color: '#5D4037',
                         textDecoration: 'none',
