@@ -18,6 +18,9 @@ router.use("/artist-votes", artistVoteRouterController);
 router.use("/comment-votes", commentVoteRouterController);
 router.use("/contact", contactRestController);
 
+router.get('/', (req, res) => {
+    res.send('HaMekomon API');
+});
 
 router.use((req, res) => {
     handleError(res, 404, "Error: Path Not found");
