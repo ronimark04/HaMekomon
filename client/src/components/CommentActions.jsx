@@ -45,7 +45,7 @@ export default function CommentActions({ commentId, onReplyClick, isReplying, on
     useEffect(() => {
         const fetchVotes = async () => {
             try {
-                const res = await fetch(`/comment-votes/comment/${commentId}`);
+                const res = await fetch(`${backendUrl}/comment-votes/comment/${commentId}`);
                 if (!res.ok) throw new Error('Failed to fetch comment votes');
                 const data = await res.json();
                 setLikes(data.upvotes.count);
@@ -70,7 +70,7 @@ export default function CommentActions({ commentId, onReplyClick, isReplying, on
         async function fetchUserVote() {
             if (!user) return;
             try {
-                const res = await fetch(`/comment-votes/user/${user._id}`);
+                const res = await fetch(`${backendUrl}/comment-votes/user/${user._id}`);
                 if (res.ok) {
                     const votes = await res.json();
                     // Check if user has voted on this comment
@@ -123,7 +123,7 @@ export default function CommentActions({ commentId, onReplyClick, isReplying, on
             if (!response.ok) throw new Error('Failed to vote');
 
             // Refetch votes after voting
-            const res = await fetch(`/comment-votes/comment/${commentId}`);
+            const res = await fetch(`${backendUrl}/comment-votes/comment/${commentId}`);
             if (!res.ok) throw new Error('Failed to fetch updated votes');
             const data = await res.json();
             setLikes(data.upvotes.count);
@@ -132,7 +132,7 @@ export default function CommentActions({ commentId, onReplyClick, isReplying, on
             setDisliked(data.downvotes.users.includes(user._id));
 
             // Refresh user vote
-            const userVotesRes = await fetch(`/comment-votes/user/${user._id}`);
+            const userVotesRes = await fetch(`${backendUrl}/comment-votes/user/${user._id}`);
             if (userVotesRes.ok) {
                 const votes = await userVotesRes.json();
                 const hasUpvoted = votes.upvotes.includes(commentId);

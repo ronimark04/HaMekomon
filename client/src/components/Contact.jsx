@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useLanguage } from '../context/languageContext';
+const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
 function isMainlyHebrew(text) {
     if (!text) return false;
@@ -81,7 +82,7 @@ function Contact() {
         setLoading(true);
         setStatus('');
         try {
-            const res = await fetch('/contact', {
+            const res = await fetch(`${backendUrl}/contact`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(form),
