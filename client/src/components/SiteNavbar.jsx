@@ -274,7 +274,7 @@ export default function SiteNavbar() {
                 <div className="absolute -left-6 mt-1 w-44 bg-white dark:bg-zinc-800 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg z-[9999] flex flex-col py-2" dir={language === 'heb' ? 'rtl' : 'ltr'}>
                   {isAuthenticated && user && (
                     <Link
-                      href={`/user/${user._id}`}
+                      href={`/users/${user._id}`}
                       className="px-4 py-2 font-normal text-red-700 hover:text-red-600 hover:bg-gray-100 dark:hover:bg-zinc-700 rounded"
                     >
                       {profileText}
@@ -340,7 +340,7 @@ export default function SiteNavbar() {
             {/* Desktop links (hidden on mobile) */}
             <div className="hidden md:flex items-center gap-4">
               {isAuthenticated && user && (
-                <Link href={`/user/${user._id}`}
+                <Link href={`/users/${user._id}`}
                   className="font-normal text-red-700 hover:text-red-600"
                 >
                   {profileText}

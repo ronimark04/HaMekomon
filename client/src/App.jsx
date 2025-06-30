@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 import Map from './components/Map'
 import Home from './components/Home'
 import SiteNavbar from "./components/SiteNavbar";
@@ -38,7 +38,8 @@ function App() {
           <Route path="/area/:areaName" element={<AreaPage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/artist/:artistId" element={<ArtistPage />} />
-          <Route path="/user/:userId" element={<ProfilePage />} />
+          <Route path="/users/:userId" element={<ProfilePage />} />
+          <Route path="/user/:userId" element={<Navigate to="/users/:userId" replace />} />
           <Route path="/admin" element={<AdminPanel />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
