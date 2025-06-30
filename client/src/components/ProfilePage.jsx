@@ -57,6 +57,9 @@ const ProfilePage = () => {
     });
     const [artistNamesById, setArtistNamesById] = useState({});
     const [artistNamesByIdEng, setArtistNamesByIdEng] = useState({});
+    const [showChangePasswordModal, setShowChangePasswordModal] = useState(false);
+    const [showDeleteAccountModal, setShowDeleteAccountModal] = useState(false);
+    const [showDeleteUserModal, setShowDeleteUserModal] = useState(false);
 
     useEffect(() => {
         async function fetchData() {

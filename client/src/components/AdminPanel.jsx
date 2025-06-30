@@ -487,7 +487,7 @@ const AdminPanel = () => {
                                                     <TableRow key={artist._id}>
                                                         <TableCell>
                                                             <Link
-                                                                href={`/artist/${artist._id}`}
+                                                                to={`/artist/${artist._id}`}
                                                                 target="_blank"
                                                                 className="text-foreground hover:text-primary transition-colors"
                                                             >
