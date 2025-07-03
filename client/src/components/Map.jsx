@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import baseMap from '../assets/map/israel-map.png';
@@ -29,8 +29,46 @@ const regionToPathMap = {
 
 export default function Map() {
     const [hoveredRegion, setHoveredRegion] = useState(null);
+    const [imagesLoaded, setImagesLoaded] = useState(false);
     const { language } = useLanguage();
     const navigate = useNavigate();
+
+    // Preload all images on component mount
+    useEffect(() => {
+        const imagesToPreload = [];
+
+        // Collect all overlay and label images
+        Object.values(regionData).forEach(region => {
+            if (region.overlay) {
+                imagesToPreload.push(region.overlay);
+            }
+            if (region.label) {
+                if (region.label.heb) imagesToPreload.push(region.label.heb);
+                if (region.label.eng) imagesToPreload.push(region.label.eng);
+            }
+        });
+
+        // Preload all images
+        let loadedCount = 0;
+        const totalImages = imagesToPreload.length;
+
+        imagesToPreload.forEach(src => {
+            const img = new Image();
+            img.onload = () => {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    setImagesLoaded(true);
+                }
+            };
+            img.onerror = () => {
+                loadedCount++;
+                if (loadedCount === totalImages) {
+                    setImagesLoaded(true);
+                }
+            };
+            img.src = src;
+        });
+    }, []);
 
     const getAreaPath = (regionId) => {
         const pathName = regionToPathMap[regionId];
@@ -42,6 +80,14 @@ export default function Map() {
 
     return (
         <div className="flex justify-center items-center min-h-[calc(100vh-64px)]">
+            {!imagesLoaded && (
+                <div className="absolute inset-0 flex items-center justify-center bg-background/50 z-10">
+                    <div className="text-center">
+                        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                        <p className="text-default-600">Loading map...</p>
+                    </div>
+                </div>
+            )}
             <div style={{ position: 'relative', width: '100%', maxWidth: '600px', minWidth: '400px' }}>
                 <img src={baseMap} alt="Map of Israel" style={{ width: '100%' }} />
 
@@ -51,10 +97,13 @@ export default function Map() {
                             key={hoveredRegion}
                             src={regionData[hoveredRegion].overlay}
                             alt={`${hoveredRegion} overlay`}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.2 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            exit={{ opacity: 0, scale: 0.95 }}
+                            transition={{
+                                duration: 0.15,
+                                ease: "easeOut"
+                            }}
                             style={{
                                 position: 'absolute',
                                 top: 0,
@@ -62,6 +111,7 @@ export default function Map() {
                                 width: '100%',
                                 pointerEvents: 'none',
                                 zIndex: 2,
+                                willChange: 'transform, opacity',
                             }}
                         />
                     )}
@@ -72,10 +122,13 @@ export default function Map() {
                             key={`label-${hoveredRegion}-${language}`}
                             src={regionData[hoveredRegion].label[language]}
                             alt={`${hoveredRegion} label`}
-                            initial={{ opacity: 0, y: 30 }}
-                            animate={{ opacity: 1, y: 0 }}
-                            exit={{ opacity: 0, y: 20 }}
-                            transition={{ duration: 0.3 }}
+                            initial={{ opacity: 0, y: 20, scale: 0.9 }}
+                            animate={{ opacity: 1, y: 0, scale: 1 }}
+                            exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                            transition={{
+                                duration: 0.2,
+                                ease: "easeOut"
+                            }}
                             style={{
                                 position: 'absolute',
                                 top: -20,
@@ -83,6 +136,7 @@ export default function Map() {
                                 width: '100%',
                                 pointerEvents: 'none',
                                 zIndex: 4,
+                                willChange: 'transform, opacity',
                             }}
                         />
                     )}
