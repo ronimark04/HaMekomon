@@ -8,6 +8,7 @@ The platform features:
 
 - Interactive map of Israel with clickable regions
 - Area Pages showcase artists grouped by their geographical region
+- Artist data scraped systematically from Wikipedia
 - Artist profiles with biographical information, embedded spotify player and user discussions
 - Voting system for artists and threaded comments (likes and dislikes)
 - Bilingual support (Hebrew/English)
