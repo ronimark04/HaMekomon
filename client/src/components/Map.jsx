@@ -97,11 +97,11 @@ export default function Map() {
                             key={hoveredRegion}
                             src={regionData[hoveredRegion].overlay}
                             alt={`${hoveredRegion} overlay`}
-                            initial={{ opacity: 0, scale: 0.95 }}
-                            animate={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: 0.95 }}
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
                             transition={{
-                                duration: 0.15,
+                                duration: 0.2,
                                 ease: "easeOut"
                             }}
                             style={{
@@ -111,7 +111,7 @@ export default function Map() {
                                 width: '100%',
                                 pointerEvents: 'none',
                                 zIndex: 2,
-                                willChange: 'transform, opacity',
+                                willChange: 'opacity',
                             }}
                         />
                     )}
@@ -126,7 +126,7 @@ export default function Map() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: 20 }}
                             transition={{
-                                duration: 0.25,
+                                duration: 0.3,
                                 ease: "easeOut"
                             }}
                             style={{
