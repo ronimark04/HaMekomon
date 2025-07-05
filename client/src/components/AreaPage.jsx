@@ -153,6 +153,50 @@ const AreaPage = () => {
         return textObj[language];
     };
 
+    // Helper to get avatar size based on rate
+    const getAvatarSize = (rate) => {
+        switch (rate) {
+            case 1: return 'w-52 h-52'; // 208px
+            case 2: return 'w-40 h-40'; // 160px
+            case 3: return 'w-36 h-36'; // 144px
+            case 4: return 'w-28 h-28'; // 112px
+            default: return 'w-52 h-52'; // Default to largest size
+        }
+    };
+
+    // Helper to get avatar pixel size based on rate
+    const getAvatarPixelSize = (rate) => {
+        switch (rate) {
+            case 1: return 208;
+            case 2: return 160;
+            case 3: return 144;
+            case 4: return 112;
+            default: return 208;
+        }
+    };
+
+    // Helper to get font size for location/year/bornElsewhere text based on rate
+    const getLocationFontSize = (rate) => {
+        switch (rate) {
+            case 1: return "1.5rem"; // Largest for rate 1
+            case 2: return "1.3rem"; // Slightly smaller for rate 2
+            case 3: return "1.1rem"; // Smaller for rate 3
+            case 4: return "0.9rem"; // Smallest for rate 4
+            default: return "1.5rem";
+        }
+    };
+
+    // Helper to get font size for bornElsewhere text based on rate
+    const getBornElsewhereFontSize = (rate) => {
+        switch (rate) {
+            case 1: return "1.1rem"; // Largest for rate 1
+            case 2: return "0.95rem"; // Slightly smaller for rate 2
+            case 3: return "0.8rem"; // Smaller for rate 3
+            case 4: return "0.65rem"; // Smallest for rate 4
+            default: return "1.1rem";
+        }
+    };
+
     // Helper to normalize area name for comparison
     const normalizeAreaName = (name) => {
         if (!name) return '';
@@ -283,8 +327,8 @@ const AreaPage = () => {
                                 <div className="relative flex items-center justify-center w-full h-full">
                                     {/* ArtistActions absolutely positioned to the left */}
                                     {(() => {
-                                        const avatarPx = 208;
-                                        const actionOffset = 55; // Smaller offset on mobile
+                                        const avatarPx = getAvatarPixelSize(artist.rate);
+                                        const actionOffset = 55;
                                         return (
                                             <div style={{
                                                 position: 'absolute',
@@ -347,7 +391,7 @@ const AreaPage = () => {
                                                 <div className="relative">
                                                     <Avatar
                                                         src={artist.image?.url}
-                                                        className={`w-52 h-52 [&>img]:object-top`}
+                                                        className={`${getAvatarSize(artist.rate)} [&>img]:object-top`}
                                                         fallback={fallbackInitial}
                                                         radius="lg"
                                                         color="danger"
@@ -369,7 +413,7 @@ const AreaPage = () => {
                                                         style={{
                                                             color: "#FEEFB6",
                                                             fontWeight: 400,
-                                                            fontSize: "1.5rem",
+                                                            fontSize: getLocationFontSize(artist.rate),
                                                             lineHeight: 1.1,
                                                             fontFamily: 'adobe-hebrew',
                                                             fontStyle: 'normal',
@@ -406,7 +450,7 @@ const AreaPage = () => {
                                                                     )}
                                                                     <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
                                                                     <div style={{
-                                                                        fontSize: "1.1rem",
+                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
                                                                         fontStyle: 'italic',
                                                                         direction: language === 'heb' ? 'rtl' : 'ltr'
                                                                     }}>
@@ -434,7 +478,7 @@ const AreaPage = () => {
                                                                         <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
                                                                     )}
                                                                     <div style={{
-                                                                        fontSize: "1.1rem",
+                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
                                                                         fontStyle: 'italic',
                                                                         direction: language === 'heb' ? 'rtl' : 'ltr'
                                                                     }}>
@@ -574,7 +618,7 @@ const AreaPage = () => {
                                                 <div className="relative">
                                                     <Avatar
                                                         src={artist.image?.url}
-                                                        className={`w-52 h-52 [&>img]:object-top`}
+                                                        className={`${getAvatarSize(artist.rate)} [&>img]:object-top`}
                                                         fallback={fallbackInitial}
                                                         radius="lg"
                                                         color="danger"
@@ -596,7 +640,7 @@ const AreaPage = () => {
                                                         style={{
                                                             color: "#FEEFB6",
                                                             fontWeight: 400,
-                                                            fontSize: "1.5rem",
+                                                            fontSize: getLocationFontSize(artist.rate),
                                                             lineHeight: 1.1,
                                                             fontFamily: 'adobe-hebrew',
                                                             fontStyle: 'normal',
@@ -633,7 +677,7 @@ const AreaPage = () => {
                                                                     )}
                                                                     <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
                                                                     <div style={{
-                                                                        fontSize: "1.1rem",
+                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
                                                                         fontStyle: 'italic',
                                                                         direction: language === 'heb' ? 'rtl' : 'ltr'
                                                                     }}>
@@ -661,7 +705,7 @@ const AreaPage = () => {
                                                                         <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
                                                                     )}
                                                                     <div style={{
-                                                                        fontSize: "1.1rem",
+                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
                                                                         fontStyle: 'italic',
                                                                         direction: language === 'heb' ? 'rtl' : 'ltr'
                                                                     }}>
