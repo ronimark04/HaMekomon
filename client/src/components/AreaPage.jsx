@@ -291,8 +291,6 @@ const AreaPage = () => {
                         let yearDisplay = '';
                         if (artist.isBand && artist.yearRange && artist.yearRange.first && artist.yearRange.last) {
                             yearDisplay = `${artist.yearRange.first} - ${artist.yearRange.last}`;
-                        } else if (!artist.isBand && artist.birthYear) {
-                            yearDisplay = artist.birthYear;
                         }
                         const showLocation = !isTelAvivArea(area?.name);
                         // Reverse: first avatar is right, second is left, etc.
@@ -301,7 +299,7 @@ const AreaPage = () => {
                         return (
                             <div
                                 key={artist._id}
-                                className={`relative flex flex-col items-center mb-16`}
+                                className={`relative flex flex-col items-center mb-20`}
                                 style={{
                                     alignItems: isLeft ? 'flex-end' : 'flex-start',
                                     left: isLeft ? `-${offset}px` : `${offset}px`,
@@ -354,6 +352,41 @@ const AreaPage = () => {
                                         whileTap={{ scale: 0.9 }}
                                         className="relative flex flex-col items-center cursor-pointer group"
                                     >
+                                        {/* Location above artist name */}
+                                        {showLocation && location && (
+                                            <span
+                                                style={{
+                                                    color: "#b71c1c",
+                                                    fontWeight: 400,
+                                                    fontSize: "1.5rem",
+                                                    lineHeight: 1,
+                                                    position: "absolute",
+                                                    top: "-62px",
+                                                    left: "50%",
+                                                    transform: "translateX(-50%)",
+                                                    textAlign: "center",
+                                                    zIndex: 10,
+                                                    pointerEvents: "none",
+                                                    fontFamily: 'adobe-hebrew',
+                                                    fontStyle: 'normal',
+                                                    textShadow: `
+                                                        1px 0 #FECD90,
+                                                        -1px 0 #FECD90,
+                                                        0 1px #FECD90,
+                                                        0 -1px #FECD90,
+                                                        0.7px 0.7px #FECD90,
+                                                        -0.7px -0.7px #FECD90,
+                                                        0.7px -0.7px #FECD90,
+                                                        -0.7px 0.7px #FECD90,
+                                                        0 0 8px rgba(183,28,28,0.5)
+                                                    `,
+                                                    whiteSpace: 'nowrap',
+                                                    direction: language === 'heb' ? 'rtl' : 'ltr'
+                                                }}
+                                            >
+                                                {location}
+                                            </span>
+                                        )}
                                         <span
                                             style={{
                                                 color: "#FEF7D5",
@@ -361,7 +394,7 @@ const AreaPage = () => {
                                                 fontSize: "2.5rem",
                                                 lineHeight: 1,
                                                 position: "absolute",
-                                                top: "-40px",
+                                                top: showLocation && location ? "-40px" : "-40px",
                                                 left: "50%",
                                                 transform: "translateX(-50%)",
                                                 textAlign: "center",
@@ -404,101 +437,53 @@ const AreaPage = () => {
                                                         }}
                                                     />
                                                 </div>
-                                                {/* Data climbing from bottom of avatar */}
-                                                <div
-                                                    className="absolute inset-0 flex flex-col justify-end items-center pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out transform translate-y-full group-hover:translate-y-0 overflow-hidden rounded-2xl"
-                                                >
+                                                {/* Data climbing from bottom of avatar - only show if bornElsewhere exists */}
+                                                {bornElsewhere && (
                                                     <div
-                                                        className="transition-transform duration-300 ease-out transform translate-y-full group-hover:translate-y-0"
-                                                        style={{
-                                                            color: "#FEEFB6",
-                                                            fontWeight: 400,
-                                                            fontSize: getLocationFontSize(artist.rate),
-                                                            lineHeight: 1.1,
-                                                            fontFamily: 'adobe-hebrew',
-                                                            fontStyle: 'normal',
-                                                            textShadow: `
-                                                                1px 0 #b71c1c,
-                                                                -1px 0 #b71c1c,
-                                                                0 1px #b71c1c,
-                                                                0 -1px #b71c1c,
-                                                                0.7px 0.7px #b71c1c,
-                                                                -0.7px -0.7px #b71c1c,
-                                                                0.7px -0.7px #b71c1c,
-                                                                -0.7px 0.7px #b71c1c,
-                                                                0 0 8px rgba(183,28,28,0.5),
-                                                                0 0 8px rgba(183,28,28,0.5)
-                                                            `,
-                                                            direction: language === 'heb' ? 'rtl' : 'ltr',
-                                                            paddingBottom: '4px',
-                                                            backgroundColor: '#fff3e0',
-                                                            opacity: 0.85,
-                                                            borderRadius: '0 0 8px 8px',
-                                                            padding: '4px 12px',
-                                                            marginBottom: '6px',
-                                                            width: 'calc(100% - 12px)',
-                                                            marginLeft: '6px',
-                                                            marginRight: '6px',
-                                                            textAlign: 'center'
-                                                        }}
+                                                        className="absolute inset-0 flex flex-col justify-end items-center pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out transform translate-y-full group-hover:translate-y-0 overflow-hidden rounded-2xl"
                                                     >
-                                                        {artist.isBand ? (
-                                                            bornElsewhere ? (
-                                                                <>
-                                                                    {showLocation && (
-                                                                        <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{location}</div>
-                                                                    )}
-                                                                    <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
-                                                                    <div style={{
-                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
-                                                                        fontStyle: 'italic',
-                                                                        direction: language === 'heb' ? 'rtl' : 'ltr'
-                                                                    }}>
-                                                                        {language === 'heb' ?
-                                                                            (artist.gender === 'm' ? `נולד ב${bornElsewhere}` :
-                                                                                artist.gender === 'f' ? `נולדה ב${bornElsewhere}` :
-                                                                                    `נולד/ה ב${bornElsewhere}`)
-                                                                            : `Born in ${bornElsewhere}`}
-                                                                    </div>
-                                                                </>
-                                                            ) : (
-                                                                <>
-                                                                    {showLocation && (
-                                                                        <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{location}</div>
-                                                                    )}
-                                                                    <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
-                                                                </>
-                                                            )
-                                                        ) : (
-                                                            bornElsewhere ? (
-                                                                <>
-                                                                    {showLocation ? (
-                                                                        <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{location} — {yearDisplay}</div>
-                                                                    ) : (
-                                                                        <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
-                                                                    )}
-                                                                    <div style={{
-                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
-                                                                        fontStyle: 'italic',
-                                                                        direction: language === 'heb' ? 'rtl' : 'ltr'
-                                                                    }}>
-                                                                        {language === 'heb' ?
-                                                                            (artist.gender === 'm' ? `נולד ב${bornElsewhere}` :
-                                                                                artist.gender === 'f' ? `נולדה ב${bornElsewhere}` :
-                                                                                    `נולד/ה ב${bornElsewhere}`)
-                                                                            : `Born in ${bornElsewhere}`}
-                                                                    </div>
-                                                                </>
-                                                            ) : (
-                                                                showLocation ? (
-                                                                    <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{location} — {yearDisplay}</div>
-                                                                ) : (
-                                                                    <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
-                                                                )
-                                                            )
-                                                        )}
+                                                        <div
+                                                            className="transition-transform duration-300 ease-out transform translate-y-full group-hover:translate-y-0"
+                                                            style={{
+                                                                color: "#FEEFB6",
+                                                                fontWeight: 400,
+                                                                fontSize: getBornElsewhereFontSize(artist.rate),
+                                                                lineHeight: 1.1,
+                                                                fontFamily: 'adobe-hebrew',
+                                                                fontStyle: 'italic',
+                                                                textShadow: `
+                                                                    1px 0 #b71c1c,
+                                                                    -1px 0 #b71c1c,
+                                                                    0 1px #b71c1c,
+                                                                    0 -1px #b71c1c,
+                                                                    0.7px 0.7px #b71c1c,
+                                                                    -0.7px -0.7px #b71c1c,
+                                                                    0.7px -0.7px #b71c1c,
+                                                                    -0.7px 0.7px #b71c1c,
+                                                                    0 0 8px rgba(183,28,28,0.5),
+                                                                    0 0 8px rgba(183,28,28,0.5)
+                                                                `,
+                                                                direction: language === 'heb' ? 'rtl' : 'ltr',
+                                                                paddingBottom: '4px',
+                                                                backgroundColor: '#fff3e0',
+                                                                opacity: 0.85,
+                                                                borderRadius: '0 0 8px 8px',
+                                                                padding: '4px 12px',
+                                                                marginBottom: '6px',
+                                                                width: 'calc(100% - 12px)',
+                                                                marginLeft: '6px',
+                                                                marginRight: '6px',
+                                                                textAlign: 'center'
+                                                            }}
+                                                        >
+                                                            {language === 'heb' ?
+                                                                (artist.gender === 'm' ? `נולד ב${bornElsewhere}` :
+                                                                    artist.gender === 'f' ? `נולדה ב${bornElsewhere}` :
+                                                                        `נולד/ה ב${bornElsewhere}`)
+                                                                : `Born in ${bornElsewhere}`}
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                )}
                                             </div>
                                         </Link>
                                     </motion.div>
@@ -518,8 +503,6 @@ const AreaPage = () => {
                         let yearDisplay = '';
                         if (artist.isBand && artist.yearRange && artist.yearRange.first && artist.yearRange.last) {
                             yearDisplay = `${artist.yearRange.first} - ${artist.yearRange.last}`;
-                        } else if (!artist.isBand && artist.birthYear) {
-                            yearDisplay = artist.birthYear;
                         }
                         const showLocation = !isTelAvivArea(area?.name);
                         // Reverse: first avatar is left, second is right, etc.
@@ -528,7 +511,7 @@ const AreaPage = () => {
                         return (
                             <div
                                 key={artist._id}
-                                className={`relative flex flex-col items-center mb-16`}
+                                className={`relative flex flex-col items-center mb-20`}
                                 style={{
                                     alignItems: isRight ? 'flex-start' : 'flex-end',
                                     left: isRight ? `${offset}px` : `-${offset}px`,
@@ -554,8 +537,8 @@ const AreaPage = () => {
                                 <div className="relative flex items-center justify-center w-full h-full">
                                     {/* ArtistActions absolutely positioned to the right */}
                                     {(() => {
-                                        const avatarPx = 208;
-                                        const actionOffset = 55; // Smaller offset on mobile
+                                        const avatarPx = getAvatarPixelSize(artist.rate);
+                                        const actionOffset = 55;
                                         return (
                                             <div style={{
                                                 position: 'absolute',
@@ -581,6 +564,41 @@ const AreaPage = () => {
                                         whileTap={{ scale: 0.9 }}
                                         className="relative flex flex-col items-center cursor-pointer group"
                                     >
+                                        {/* Location above artist name */}
+                                        {showLocation && location && (
+                                            <span
+                                                style={{
+                                                    color: "#b71c1c",
+                                                    fontWeight: 400,
+                                                    fontSize: "1.5rem",
+                                                    lineHeight: 1,
+                                                    position: "absolute",
+                                                    top: "-62px",
+                                                    left: "50%",
+                                                    transform: "translateX(-50%)",
+                                                    textAlign: "center",
+                                                    zIndex: 10,
+                                                    pointerEvents: "none",
+                                                    fontFamily: 'adobe-hebrew',
+                                                    fontStyle: 'normal',
+                                                    textShadow: `
+                                                        1px 0 #FECD90,
+                                                        -1px 0 #FECD90,
+                                                        0 1px #FECD90,
+                                                        0 -1px #FECD90,
+                                                        0.7px 0.7px #FECD90,
+                                                        -0.7px -0.7px #FECD90,
+                                                        0.7px -0.7px #FECD90,
+                                                        -0.7px 0.7px #FECD90,
+                                                        0 0 8px rgba(183,28,28,0.5)
+                                                    `,
+                                                    whiteSpace: 'nowrap',
+                                                    direction: language === 'heb' ? 'rtl' : 'ltr'
+                                                }}
+                                            >
+                                                {location}
+                                            </span>
+                                        )}
                                         <span
                                             style={{
                                                 color: "#FEEFB6",
@@ -588,7 +606,7 @@ const AreaPage = () => {
                                                 fontSize: "2.5rem",
                                                 lineHeight: 1,
                                                 position: "absolute",
-                                                top: "-40px",
+                                                top: showLocation && location ? "-40px" : "-40px",
                                                 left: "50%",
                                                 transform: "translateX(-50%)",
                                                 textAlign: "center",
@@ -631,101 +649,53 @@ const AreaPage = () => {
                                                         }}
                                                     />
                                                 </div>
-                                                {/* Data climbing from bottom of avatar */}
-                                                <div
-                                                    className="absolute inset-0 flex flex-col justify-end items-center pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out transform translate-y-full group-hover:translate-y-0 overflow-hidden rounded-2xl"
-                                                >
+                                                {/* Data climbing from bottom of avatar - only show if bornElsewhere exists */}
+                                                {bornElsewhere && (
                                                     <div
-                                                        className="transition-transform duration-300 ease-out transform translate-y-full group-hover:translate-y-0"
-                                                        style={{
-                                                            color: "#FEEFB6",
-                                                            fontWeight: 400,
-                                                            fontSize: getLocationFontSize(artist.rate),
-                                                            lineHeight: 1.1,
-                                                            fontFamily: 'adobe-hebrew',
-                                                            fontStyle: 'normal',
-                                                            textShadow: `
-                                                                1px 0 #b71c1c,
-                                                                -1px 0 #b71c1c,
-                                                                0 1px #b71c1c,
-                                                                0 -1px #b71c1c,
-                                                                0.7px 0.7px #b71c1c,
-                                                                -0.7px -0.7px #b71c1c,
-                                                                0.7px -0.7px #b71c1c,
-                                                                -0.7px 0.7px #b71c1c,
-                                                                0 0 8px rgba(183,28,28,0.5),
-                                                                0 0 8px rgba(183,28,28,0.5)
-                                                            `,
-                                                            direction: language === 'heb' ? 'rtl' : 'ltr',
-                                                            paddingBottom: '4px',
-                                                            backgroundColor: '#fff3e0',
-                                                            opacity: 0.85,
-                                                            borderRadius: '0 0 8px 8px',
-                                                            padding: '4px 12px',
-                                                            marginBottom: '6px',
-                                                            width: 'calc(100% - 12px)',
-                                                            marginLeft: '6px',
-                                                            marginRight: '6px',
-                                                            textAlign: 'center'
-                                                        }}
+                                                        className="absolute inset-0 flex flex-col justify-end items-center pointer-events-none opacity-0 group-hover:opacity-100 transition-all duration-300 ease-out transform translate-y-full group-hover:translate-y-0 overflow-hidden rounded-2xl"
                                                     >
-                                                        {artist.isBand ? (
-                                                            bornElsewhere ? (
-                                                                <>
-                                                                    {showLocation && (
-                                                                        <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{location}</div>
-                                                                    )}
-                                                                    <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
-                                                                    <div style={{
-                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
-                                                                        fontStyle: 'italic',
-                                                                        direction: language === 'heb' ? 'rtl' : 'ltr'
-                                                                    }}>
-                                                                        {language === 'heb' ?
-                                                                            (artist.gender === 'm' ? `נולד ב${bornElsewhere}` :
-                                                                                artist.gender === 'f' ? `נולדה ב${bornElsewhere}` :
-                                                                                    `נולד/ה ב${bornElsewhere}`)
-                                                                            : `Born in ${bornElsewhere}`}
-                                                                    </div>
-                                                                </>
-                                                            ) : (
-                                                                <>
-                                                                    {showLocation && (
-                                                                        <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{location}</div>
-                                                                    )}
-                                                                    <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
-                                                                </>
-                                                            )
-                                                        ) : (
-                                                            bornElsewhere ? (
-                                                                <>
-                                                                    {showLocation ? (
-                                                                        <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{location} — {yearDisplay}</div>
-                                                                    ) : (
-                                                                        <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
-                                                                    )}
-                                                                    <div style={{
-                                                                        fontSize: getBornElsewhereFontSize(artist.rate),
-                                                                        fontStyle: 'italic',
-                                                                        direction: language === 'heb' ? 'rtl' : 'ltr'
-                                                                    }}>
-                                                                        {language === 'heb' ?
-                                                                            (artist.gender === 'm' ? `נולד ב${bornElsewhere}` :
-                                                                                artist.gender === 'f' ? `נולדה ב${bornElsewhere}` :
-                                                                                    `נולד/ה ב${bornElsewhere}`)
-                                                                            : `Born in ${bornElsewhere}`}
-                                                                    </div>
-                                                                </>
-                                                            ) : (
-                                                                showLocation ? (
-                                                                    <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{location} — {yearDisplay}</div>
-                                                                ) : (
-                                                                    <div style={{ direction: language === 'heb' ? 'rtl' : 'ltr' }}>{yearDisplay}</div>
-                                                                )
-                                                            )
-                                                        )}
+                                                        <div
+                                                            className="transition-transform duration-300 ease-out transform translate-y-full group-hover:translate-y-0"
+                                                            style={{
+                                                                color: "#FEEFB6",
+                                                                fontWeight: 400,
+                                                                fontSize: getBornElsewhereFontSize(artist.rate),
+                                                                lineHeight: 1.1,
+                                                                fontFamily: 'adobe-hebrew',
+                                                                fontStyle: 'italic',
+                                                                textShadow: `
+                                                                    1px 0 #b71c1c,
+                                                                    -1px 0 #b71c1c,
+                                                                    0 1px #b71c1c,
+                                                                    0 -1px #b71c1c,
+                                                                    0.7px 0.7px #b71c1c,
+                                                                    -0.7px -0.7px #b71c1c,
+                                                                    0.7px -0.7px #b71c1c,
+                                                                    -0.7px 0.7px #b71c1c,
+                                                                    0 0 8px rgba(183,28,28,0.5),
+                                                                    0 0 8px rgba(183,28,28,0.5)
+                                                                `,
+                                                                direction: language === 'heb' ? 'rtl' : 'ltr',
+                                                                paddingBottom: '4px',
+                                                                backgroundColor: '#fff3e0',
+                                                                opacity: 0.85,
+                                                                borderRadius: '0 0 8px 8px',
+                                                                padding: '4px 12px',
+                                                                marginBottom: '6px',
+                                                                width: 'calc(100% - 12px)',
+                                                                marginLeft: '6px',
+                                                                marginRight: '6px',
+                                                                textAlign: 'center'
+                                                            }}
+                                                        >
+                                                            {language === 'heb' ?
+                                                                (artist.gender === 'm' ? `נולד ב${bornElsewhere}` :
+                                                                    artist.gender === 'f' ? `נולדה ב${bornElsewhere}` :
+                                                                        `נולד/ה ב${bornElsewhere}`)
+                                                                : `Born in ${bornElsewhere}`}
+                                                        </div>
                                                     </div>
-                                                </div>
+                                                )}
                                             </div>
                                         </Link>
                                     </motion.div>
