@@ -18,6 +18,10 @@ router.use("/artist-votes", artistVoteRouterController);
 router.use("/comment-votes", commentVoteRouterController);
 router.use("/contact", contactRestController);
 
+router.get('/health', (req, res) => {
+    res.status(200).send('OK');
+});
+
 router.get('/', (req, res) => {
     res.send('HaMekomon API');
 });
