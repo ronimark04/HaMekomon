@@ -17,10 +17,10 @@ const formContainerStyle = {
     padding: 32,
     maxWidth: 540,
     width: '100%',
-    margin: '40px auto',
     display: 'flex',
     flexDirection: 'column',
     gap: 18,
+    margin: 20
 };
 
 const labelBaseStyle = {

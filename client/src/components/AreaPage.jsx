@@ -33,6 +33,8 @@ const AreaPage = () => {
     const [area, setArea] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    // Responsivity: screenSize can be 'xl', 'lg', 'md', 'sm', 'xs'
+    const [screenSize, setScreenSize] = useState('xl');
     const { language } = useLanguage();
     const { user } = useAuth();
 
@@ -94,6 +96,23 @@ const AreaPage = () => {
         };
     }, []);
 
+    // Effect for screen size detection (breakpoints: 1064, 768, 602)
+    useEffect(() => {
+        const getScreenSize = () => {
+            const w = window.innerWidth;
+            if (w < 602) return 'sm';
+            if (w < 768) return 'md';
+            if (w < 1064) return 'lg';
+            return 'xl';
+        };
+        const checkScreenSize = () => {
+            setScreenSize(getScreenSize());
+        };
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
+
     const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
     useEffect(() => {
@@ -153,48 +172,130 @@ const AreaPage = () => {
         return textObj[language];
     };
 
-    // Helper to get avatar size based on rate
+    // Helper to get avatar size based on rate and screenSize
     const getAvatarSize = (rate) => {
-        switch (rate) {
-            case 1: return 'w-52 h-52'; // 208px
-            case 2: return 'w-40 h-40'; // 160px
-            case 3: return 'w-36 h-36'; // 144px
-            case 4: return 'w-28 h-28'; // 112px
-            default: return 'w-52 h-52'; // Default to largest size
-        }
+        // Sizes for each breakpoint (w-h classes)
+        const sizes = {
+            xl: ['w-52 h-52', 'w-40 h-40', 'w-36 h-36', 'w-28 h-28'], // 208, 160, 144, 112
+            lg: ['w-40 h-40', 'w-32 h-32', 'w-28 h-28', 'w-24 h-24'], // 160, 128, 112, 96
+            md: ['w-32 h-32', 'w-28 h-28', 'w-24 h-24', 'w-20 h-20'], // 128, 112, 96, 80
+            sm: ['w-28 h-28', 'w-24 h-24', 'w-20 h-20', 'w-16 h-16'], // 112, 96, 80, 64
+        };
+        const idx = Math.max(0, Math.min(3, (rate || 1) - 1));
+        const arr = sizes[screenSize] || sizes.sm;
+        return arr[idx];
     };
-
-    // Helper to get avatar pixel size based on rate
+    // Helper to get avatar pixel size based on rate and screenSize
     const getAvatarPixelSize = (rate) => {
-        switch (rate) {
-            case 1: return 208;
-            case 2: return 160;
-            case 3: return 144;
-            case 4: return 112;
-            default: return 208;
-        }
+        const px = {
+            xl: [208, 160, 144, 112],
+            lg: [160, 128, 112, 96],
+            md: [128, 112, 96, 80],
+            sm: [112, 96, 80, 64],
+        };
+        const idx = Math.max(0, Math.min(3, (rate || 1) - 1));
+        const arr = px[screenSize] || px.sm;
+        return arr[idx];
     };
-
-    // Helper to get font size for location/year/bornElsewhere text based on rate
+    // Helper to get font size for location/year/bornElsewhere text based on rate and screenSize
     const getLocationFontSize = (rate) => {
-        switch (rate) {
-            case 1: return "1.5rem"; // Largest for rate 1
-            case 2: return "1.3rem"; // Slightly smaller for rate 2
-            case 3: return "1.1rem"; // Smaller for rate 3
-            case 4: return "0.9rem"; // Smallest for rate 4
-            default: return "1.5rem";
-        }
+        const sizes = {
+            xl: ["1.5rem", "1.3rem", "1.1rem", "0.9rem"],
+            lg: ["1.3rem", "1.1rem", "1.0rem", "0.85rem"],
+            md: ["1.1rem", "1.0rem", "0.9rem", "0.8rem"],
+            sm: ["1.0rem", "0.9rem", "0.8rem", "0.7rem"],
+        };
+        const idx = Math.max(0, Math.min(3, (rate || 1) - 1));
+        const arr = sizes[screenSize] || sizes.sm;
+        return arr[idx];
     };
-
-    // Helper to get font size for bornElsewhere text based on rate
+    // Helper to get font size for bornElsewhere text based on rate and screenSize
     const getBornElsewhereFontSize = (rate) => {
-        switch (rate) {
-            case 1: return "1.1rem"; // Largest for rate 1
-            case 2: return "0.95rem"; // Slightly smaller for rate 2
-            case 3: return "0.8rem"; // Smaller for rate 3
-            case 4: return "0.65rem"; // Smallest for rate 4
-            default: return "1.1rem";
-        }
+        const sizes = {
+            xl: ["1.1rem", "0.95rem", "0.8rem", "0.65rem"],
+            lg: ["0.95rem", "0.85rem", "0.75rem", "0.6rem"],
+            md: ["0.9rem", "0.8rem", "0.7rem", "0.6rem"],
+            sm: ["0.8rem", "0.7rem", "0.6rem", "0.5rem"],
+        };
+        const idx = Math.max(0, Math.min(3, (rate || 1) - 1));
+        const arr = sizes[screenSize] || sizes.sm;
+        return arr[idx];
+    };
+    // Helper to get font size for artist name
+    const getArtistNameFontSize = () => {
+        const sizes = {
+            xl: "2.5rem",
+            lg: "2.1rem",
+            md: "1.8rem",
+            sm: "1.5rem",
+        };
+        return sizes[screenSize] || sizes.sm;
+    };
+    // Helper to get artist name top position
+    const getArtistNameTopPosition = () => {
+        const sizes = {
+            xl: "-40px",
+            lg: "-36px",
+            md: "-31px",
+            sm: "-26px",
+        };
+        return sizes[screenSize] || sizes.sm;
+    };
+    // Helper to get location top position
+    const getLocationTopPosition = () => {
+        const sizes = {
+            xl: "-62px",
+            lg: "-54px",
+            md: "-49px",
+            sm: "-41px",
+        };
+        return sizes[screenSize] || sizes.sm;
+    };
+    // Helper to get gap between columns
+    const getColumnGap = () => {
+        const gaps = {
+            xl: 'gap-96', // 24rem
+            lg: 'gap-48', // 12rem
+            md: 'gap-32', // 8rem
+            sm: 'gap-16', // 4rem
+        };
+        return gaps[screenSize] || gaps.sm;
+    };
+    // Helper to get offset for avatars
+    const getAvatarOffset = () => {
+        const offsets = {
+            xl: 60,
+            lg: 40,
+            md: 30,
+            sm: 18,
+        };
+        return offsets[screenSize] || offsets.sm;
+    };
+    // Helper to get ArtistActions offset
+    const getActionOffset = () => {
+        // Adjusted: lg is less than before, sm is more than before
+        const offsets = {
+            xl: 55,
+            lg: 48,
+            md: 35,
+            sm: 32,
+        };
+        return offsets[screenSize] || offsets.sm;
+    };
+    // Helper to get area title max height
+    const getAreaTitleMaxHeight = () => {
+        const largerImageAreas = ['southern-negev-and-arava', 'haifa-area', 'jerusalem-area'];
+        const heights = {
+            xl: 'max-h-40',
+            lg: 'max-h-32',
+            md: 'max-h-24',
+            sm: 'max-h-20',
+        };
+        return largerImageAreas.includes(areaName) ? (heights[screenSize] || heights.sm) : (heights[screenSize] || heights.sm);
+    };
+    // Helper to get location font size for mobile (now for all breakpoints)
+    const getLocationFontSizeForMobile = () => {
+        return getLocationFontSize(1); // Use rate 1 as base
     };
 
     // Helper to normalize area name for comparison
@@ -259,17 +360,22 @@ const AreaPage = () => {
 
     const areaTitleImage = getAreaTitleImage();
 
-    // Determine max height based on area
-    const getAreaTitleMaxHeight = () => {
-        const largerImageAreas = ['southern-negev-and-arava', 'haifa-area', 'jerusalem-area'];
-        return largerImageAreas.includes(areaName) ? 'max-h-40' : 'max-h-24';
+    // Helper to get logo margin (top and bottom) based on screenSize
+    const getLogoMargin = () => {
+        const margins = {
+            xl: 'mb-28 mt-0',
+            lg: 'mb-28 mt-[-15px]',
+            md: 'mb-20 mt-[-20px]',
+            sm: 'mb-16 mt-[-20px]',
+        };
+        return margins[screenSize] || margins.sm;
     };
 
     return (
         <div className="container mx-auto p-6 pt-16 pb-24">
             {/* Area Title Image */}
             {areaTitleImage && (
-                <div className="flex justify-center mb-28">
+                <div className={`flex justify-center ${getLogoMargin()}`}>
                     <img
                         src={areaTitleImage}
                         alt={`${area?.name || 'Area'} Title`}
@@ -279,7 +385,7 @@ const AreaPage = () => {
                 </div>
             )}
 
-            <div className="flex justify-center items-start relative gap-96">
+            <div className={`flex justify-center items-start relative ${getColumnGap()}`}>
                 {/* Left column */}
                 <div className="flex flex-col relative">
                     {leftColumnArtists.map((artist, idx) => {
@@ -294,12 +400,12 @@ const AreaPage = () => {
                         }
                         const showLocation = !isTelAvivArea(area?.name);
                         // Reverse: first avatar is right, second is left, etc.
-                        const offset = 60; // px, smaller on mobile
+                        const offset = getAvatarOffset();
                         const isLeft = idx % 2 !== 0;
                         return (
                             <div
                                 key={artist._id}
-                                className={`relative flex flex-col items-center mb-20`}
+                                className={`relative flex flex-col items-center ${screenSize === 'sm' ? 'mb-12' : screenSize === 'md' ? 'mb-20' : 'mb-24'}`}
                                 style={{
                                     alignItems: isLeft ? 'flex-end' : 'flex-start',
                                     left: isLeft ? `-${offset}px` : `${offset}px`,
@@ -326,12 +432,14 @@ const AreaPage = () => {
                                     {/* ArtistActions absolutely positioned to the left */}
                                     {(() => {
                                         const avatarPx = getAvatarPixelSize(artist.rate);
-                                        const actionOffset = 55;
+                                        const actionOffset = getActionOffset();
+                                        // Lower ArtistActions for rate 4
+                                        const extraTop = artist.rate === 4 ? 6 : 0;
                                         return (
                                             <div style={{
                                                 position: 'absolute',
                                                 left: `calc(50% - ${avatarPx / 2 + actionOffset}px)`,
-                                                top: '50%',
+                                                top: `calc(50% + ${extraTop}px)`,
                                                 transform: 'translateY(-50%)',
                                                 zIndex: 20,
                                             }}>
@@ -342,6 +450,7 @@ const AreaPage = () => {
                                                     userId={user?._id}
                                                     column="left"
                                                     rate={artist.rate}
+                                                    compact={artist.rate === 4}
                                                 />
                                             </div>
                                         );
@@ -351,6 +460,7 @@ const AreaPage = () => {
                                         whileHover={{ scale: 1.08 }}
                                         whileTap={{ scale: 0.9 }}
                                         className="relative flex flex-col items-center cursor-pointer group"
+                                        style={{ zIndex: 20 }}
                                     >
                                         {/* Location above artist name */}
                                         {showLocation && location && (
@@ -358,14 +468,14 @@ const AreaPage = () => {
                                                 style={{
                                                     color: "#b71c1c",
                                                     fontWeight: 400,
-                                                    fontSize: "1.5rem",
+                                                    fontSize: getLocationFontSizeForMobile(),
                                                     lineHeight: 1,
                                                     position: "absolute",
-                                                    top: "-62px",
+                                                    top: getLocationTopPosition(),
                                                     left: "50%",
                                                     transform: "translateX(-50%)",
                                                     textAlign: "center",
-                                                    zIndex: 10,
+                                                    zIndex: 30,
                                                     pointerEvents: "none",
                                                     fontFamily: 'adobe-hebrew',
                                                     fontStyle: 'normal',
@@ -391,14 +501,14 @@ const AreaPage = () => {
                                             style={{
                                                 color: "#FEF7D5",
                                                 fontWeight: 400,
-                                                fontSize: "2.5rem",
+                                                fontSize: getArtistNameFontSize(),
                                                 lineHeight: 1,
                                                 position: "absolute",
-                                                top: showLocation && location ? "-40px" : "-40px",
+                                                top: getArtistNameTopPosition(),
                                                 left: "50%",
                                                 transform: "translateX(-50%)",
                                                 textAlign: "center",
-                                                zIndex: 10,
+                                                zIndex: 30,
                                                 pointerEvents: "none",
                                                 fontFamily: 'adobe-hebrew',
                                                 fontStyle: 'normal',
@@ -493,7 +603,7 @@ const AreaPage = () => {
                     })}
                 </div>
                 {/* Right column */}
-                <div className="flex flex-col relative mt-28">
+                <div className={`flex flex-col relative ${screenSize === 'sm' ? 'mt-8' : screenSize === 'md' ? 'mt-16' : 'mt-28'}`}>
                     {rightColumnArtists.map((artist, idx) => {
                         const artistNameRaw = getLocalizedText(artist.name, language === 'heb' ? 'לא ידוע' : 'Unknown');
                         const artistName = stripParentheses(artistNameRaw);
@@ -506,12 +616,12 @@ const AreaPage = () => {
                         }
                         const showLocation = !isTelAvivArea(area?.name);
                         // Reverse: first avatar is left, second is right, etc.
-                        const offset = 60; // px, smaller on mobile
+                        const offset = getAvatarOffset();
                         const isRight = idx % 2 !== 0;
                         return (
                             <div
                                 key={artist._id}
-                                className={`relative flex flex-col items-center mb-20`}
+                                className={`relative flex flex-col items-center ${screenSize === 'sm' ? 'mb-12' : screenSize === 'md' ? 'mb-20' : 'mb-24'}`}
                                 style={{
                                     alignItems: isRight ? 'flex-start' : 'flex-end',
                                     left: isRight ? `${offset}px` : `-${offset}px`,
@@ -538,12 +648,14 @@ const AreaPage = () => {
                                     {/* ArtistActions absolutely positioned to the right */}
                                     {(() => {
                                         const avatarPx = getAvatarPixelSize(artist.rate);
-                                        const actionOffset = 55;
+                                        const actionOffset = getActionOffset();
+                                        // Lower ArtistActions for rate 4
+                                        const extraTop = artist.rate === 4 ? 8 : 0;
                                         return (
                                             <div style={{
                                                 position: 'absolute',
                                                 right: `calc(50% - ${avatarPx / 2 + actionOffset}px)`,
-                                                top: '50%',
+                                                top: `calc(50% + ${extraTop}px)`,
                                                 transform: 'translateY(-50%)',
                                                 zIndex: 20,
                                             }}>
@@ -554,6 +666,7 @@ const AreaPage = () => {
                                                     userId={user?._id}
                                                     column="right"
                                                     rate={artist.rate}
+                                                    compact={artist.rate === 4}
                                                 />
                                             </div>
                                         );
@@ -563,6 +676,7 @@ const AreaPage = () => {
                                         whileHover={{ scale: 1.08 }}
                                         whileTap={{ scale: 0.9 }}
                                         className="relative flex flex-col items-center cursor-pointer group"
+                                        style={{ zIndex: 20 }}
                                     >
                                         {/* Location above artist name */}
                                         {showLocation && location && (
@@ -570,14 +684,14 @@ const AreaPage = () => {
                                                 style={{
                                                     color: "#b71c1c",
                                                     fontWeight: 400,
-                                                    fontSize: "1.5rem",
+                                                    fontSize: getLocationFontSizeForMobile(),
                                                     lineHeight: 1,
                                                     position: "absolute",
-                                                    top: "-62px",
+                                                    top: getLocationTopPosition(),
                                                     left: "50%",
                                                     transform: "translateX(-50%)",
                                                     textAlign: "center",
-                                                    zIndex: 10,
+                                                    zIndex: 30,
                                                     pointerEvents: "none",
                                                     fontFamily: 'adobe-hebrew',
                                                     fontStyle: 'normal',
@@ -603,14 +717,14 @@ const AreaPage = () => {
                                             style={{
                                                 color: "#FEEFB6",
                                                 fontWeight: 400,
-                                                fontSize: "2.5rem",
+                                                fontSize: getArtistNameFontSize(),
                                                 lineHeight: 1,
                                                 position: "absolute",
-                                                top: showLocation && location ? "-40px" : "-40px",
+                                                top: getArtistNameTopPosition(),
                                                 left: "50%",
                                                 transform: "translateX(-50%)",
                                                 textAlign: "center",
-                                                zIndex: 10,
+                                                zIndex: 30,
                                                 pointerEvents: "none",
                                                 fontFamily: 'adobe-hebrew',
                                                 fontStyle: 'normal',
@@ -710,9 +824,9 @@ const AreaPage = () => {
                     className="absolute left-1/2"
                     style={{
                         transform: 'translateX(-50%)',
-                        top: '-60px',
+                        top: screenSize === 'sm' ? '-30px' : screenSize === 'md' ? '-40px' : '-60px',
                         bottom: '0px',
-                        width: '16px',
+                        width: screenSize === 'sm' ? '8px' : screenSize === 'md' ? '10px' : '16px',
                         zIndex: 10,
                         display: 'flex',
                         flexDirection: 'column',
@@ -723,11 +837,11 @@ const AreaPage = () => {
                     {/* Top circle */}
                     <div
                         style={{
-                            width: '40px',
-                            height: '40px',
+                            width: screenSize === 'sm' ? '16px' : screenSize === 'md' ? '24px' : '40px',
+                            height: screenSize === 'sm' ? '16px' : screenSize === 'md' ? '24px' : '40px',
                             background: '#a1130a',
                             borderRadius: '50%',
-                            marginBottom: '-12px', // overlap with line
+                            marginBottom: screenSize === 'sm' ? '-4px' : screenSize === 'md' ? '-6px' : '-12px',
                         }}
                         className="shadow-[0_0_6px_0.5px_rgba(161,19,10,0.8)]"
                     />
@@ -735,20 +849,20 @@ const AreaPage = () => {
                     <div
                         style={{
                             flex: 1,
-                            width: '16px',
+                            width: screenSize === 'sm' ? '8px' : screenSize === 'md' ? '10px' : '16px',
                             background: '#a1130a',
-                            minHeight: '200px', // ensures line is visible even with few avatars
+                            minHeight: '80px', // ensures line is visible even with few avatars
                         }}
                         className="shadow-[0_0_4px_0.5px_rgba(161,19,10,0.8)]"
                     />
                     {/* Bottom circle */}
                     <div
                         style={{
-                            width: '40px',
-                            height: '40px',
+                            width: screenSize === 'sm' ? '16px' : screenSize === 'md' ? '24px' : '40px',
+                            height: screenSize === 'sm' ? '16px' : screenSize === 'md' ? '24px' : '40px',
                             background: '#a1130a',
                             borderRadius: '50%',
-                            marginTop: '-12px', // overlap with line
+                            marginTop: screenSize === 'sm' ? '-4px' : screenSize === 'md' ? '-6px' : '-12px',
                         }}
                         className="shadow-[0_0_6px_0.5px_rgba(161,19,10,0.8)]"
                     />

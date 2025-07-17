@@ -55,11 +55,12 @@ const ProfilePage = () => {
         liked: 3,
         disliked: 3
     });
-    const [artistNamesById, setArtistNamesById] = useState({});
-    const [artistNamesByIdEng, setArtistNamesByIdEng] = useState({});
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
     const [showChangePasswordModal, setShowChangePasswordModal] = useState(false);
     const [showDeleteAccountModal, setShowDeleteAccountModal] = useState(false);
     const [showDeleteUserModal, setShowDeleteUserModal] = useState(false);
+    const [artistNamesById, setArtistNamesById] = useState({});
+    const [artistNamesByIdEng, setArtistNamesByIdEng] = useState({});
 
     useEffect(() => {
         async function fetchData() {
@@ -142,6 +143,14 @@ const ProfilePage = () => {
         }
         if (userId) fetchData();
     }, [userId]);
+
+    useEffect(() => {
+        function handleResize() {
+            setIsMobile(window.innerWidth < 768);
+        }
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
 
     // Helper to refresh all comment-related states
     const refreshAllComments = async () => {
@@ -307,13 +316,22 @@ const ProfilePage = () => {
                 {/* Artist line link */}
                 <div style={{
                     color: '#666',
-                    fontSize: '0.9rem',
                     marginBottom: '8px',
                     direction: language === 'heb' ? 'rtl' : 'ltr',
-                    fontStyle: 'italic'
+                    //fontStyle: 'italic'
                 }}>
-                    <Link to={artistId ? `/artist/${artistId}` : '#'} style={{ color: '#666', textDecoration: 'none', fontStyle: 'italic' }}>
-                        {language === 'heb' ? `על ${artistName}` : `On ${artistName}`}
+                    <Link to={artistId ? `/artist/${artistId}` : '#'} style={{ color: '#4B2E19', textDecoration: 'none', fontSize: '0.9rem' }}>
+                        {language === 'heb' ? (
+                            <>
+                                {'על '}
+                                <span style={{ color: '#666', fontStyle: 'italic', fontSize: '1rem' }}>{artistName}</span>
+                            </>
+                        ) : (
+                            <>
+                                {'On '}
+                                <span style={{ color: '#666', fontStyle: 'italic', fontSize: '1rem' }}>{artistName}</span>
+                            </>
+                        )}
                     </Link>
                 </div>
                 {/* Reply to line, if present */}
@@ -406,6 +424,7 @@ const ProfilePage = () => {
 
     // Helper to get visible comments based on section and isMobile
     const getVisibleComments = (commentsArr, section) => {
+        if (!isMobile) return commentsArr.filter(comment => !comment.deleted);
         return commentsArr.filter(comment => !comment.deleted).slice(0, showCount[section]);
     };
 
@@ -703,7 +722,7 @@ const ProfilePage = () => {
                     display: 'flex',
                     gap: '24px',
                     alignItems: 'flex-start',
-                    flexDirection: language === 'eng' ? 'row' : 'row-reverse',
+                    flexDirection: isMobile ? 'column' : (language === 'eng' ? 'row' : 'row-reverse'),
                     opacity: 0.85
                 }}
             >
@@ -714,9 +733,9 @@ const ProfilePage = () => {
                     borderRadius: 16,
                     boxShadow: '0 2px 8px #0001',
                     padding: 24,
-                    width: '33.33%',
+                    width: isMobile ? '100%' : '33.33%',
                     height: 'fit-content',
-                    marginBottom: 16
+                    marginBottom: isMobile ? 16 : 0
                 }}>
                     <h2 style={{
                         color: '#5D4037',
@@ -727,9 +746,15 @@ const ProfilePage = () => {
                         {language === 'heb' ? 'תגובות' : 'Comments'}
                     </h2>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                        {getVisibleComments(comments, 'comments').map(comment => renderComment(comment, isOwnProfile))}
+                        {getVisibleComments(comments, 'comments').length === 0 ? (
+                            <div style={{ color: '#888', textAlign: language === 'heb' ? 'right' : 'left', direction: language === 'heb' ? 'rtl' : 'ltr', fontSize: 16, fontStyle: 'italic', margin: '12px 0' }}>
+                                {language === 'heb' ? 'אין תגובות להציג' : 'No comments yet'}
+                            </div>
+                        ) : (
+                            getVisibleComments(comments, 'comments').map(comment => renderComment(comment, isOwnProfile))
+                        )}
                     </div>
-                    {comments.filter(comment => !comment.deleted).length > showCount.comments && (
+                    {isMobile && comments.filter(comment => !comment.deleted).length > showCount.comments && (
                         <div style={{ display: 'flex', justifyContent: language === 'heb' ? 'flex-end' : 'flex-start' }}>
                             <button
                                 style={{
@@ -759,10 +784,10 @@ const ProfilePage = () => {
                     borderRadius: 16,
                     boxShadow: '0 2px 8px #0001',
                     padding: 24,
-                    width: '33.33%',
+                    width: isMobile ? '100%' : '33.33%',
                     height: 'fit-content',
                     opacity: 0.85,
-                    marginBottom: 16
+                    marginBottom: isMobile ? 16 : 0
                 }}>
                     <h2 style={{
                         color: '#5D4037',
@@ -773,9 +798,15 @@ const ProfilePage = () => {
                         {language === 'heb' ? 'תגובות שאהבתי' : 'Liked Comments'}
                     </h2>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                        {getVisibleComments(likedComments, 'liked').map(comment => renderComment(comment, false))}
+                        {getVisibleComments(likedComments, 'liked').length === 0 ? (
+                            <div style={{ color: '#888', textAlign: language === 'heb' ? 'right' : 'left', direction: language === 'heb' ? 'rtl' : 'ltr', fontSize: 16, fontStyle: 'italic', margin: '12px 0' }}>
+                                {language === 'heb' ? 'אין לייקים להציג' : 'No likes yet'}
+                            </div>
+                        ) : (
+                            getVisibleComments(likedComments, 'liked').map(comment => renderComment(comment, false))
+                        )}
                     </div>
-                    {likedComments.filter(comment => !comment.deleted).length > showCount.liked && (
+                    {isMobile && likedComments.filter(comment => !comment.deleted).length > showCount.liked && (
                         <div style={{ display: 'flex', justifyContent: language === 'heb' ? 'flex-end' : 'flex-start' }}>
                             <button
                                 style={{
@@ -805,7 +836,7 @@ const ProfilePage = () => {
                     borderRadius: 16,
                     boxShadow: '0 2px 8px #0001',
                     padding: 24,
-                    width: '33.33%',
+                    width: isMobile ? '100%' : '33.33%',
                     height: 'fit-content',
                     opacity: 0.85
                 }}>
@@ -818,9 +849,15 @@ const ProfilePage = () => {
                         {language === 'heb' ? 'תגובות שלא אהבתי' : 'Disliked Comments'}
                     </h2>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                        {getVisibleComments(dislikedComments, 'disliked').map(comment => renderComment(comment, false))}
+                        {getVisibleComments(dislikedComments, 'disliked').length === 0 ? (
+                            <div style={{ color: '#888', textAlign: language === 'heb' ? 'right' : 'left', direction: language === 'heb' ? 'rtl' : 'ltr', fontSize: 16, fontStyle: 'italic', margin: '12px 0' }}>
+                                {language === 'heb' ? 'אין דיסלייקים להציג' : 'No dislikes yet'}
+                            </div>
+                        ) : (
+                            getVisibleComments(dislikedComments, 'disliked').map(comment => renderComment(comment, false))
+                        )}
                     </div>
-                    {dislikedComments.filter(comment => !comment.deleted).length > showCount.disliked && (
+                    {isMobile && dislikedComments.filter(comment => !comment.deleted).length > showCount.disliked && (
                         <div style={{ display: 'flex', justifyContent: language === 'heb' ? 'flex-end' : 'flex-start' }}>
                             <button
                                 style={{

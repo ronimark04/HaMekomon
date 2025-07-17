@@ -11,8 +11,27 @@ const backendUrl = import.meta.env.VITE_BACKEND_URL;
 const ICON_COLOR = "#C1873B";
 const ICON_HOVER_COLOR = "#A15E0A";
 
-const iconStyle = (active, hover, _isMobile, rate) => {
-    // Only keep desktop logic
+const iconStyle = (active, hover, isMobile, rate, compact) => {
+    // For mobile, all rates have the same size, but smaller for sm (<602px)
+    if (isMobile) {
+        return {
+            width: 22,
+            height: 22,
+            background: "none",
+            border: "none",
+            color: hover ? ICON_HOVER_COLOR : active ? ICON_HOVER_COLOR : ICON_COLOR,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            margin: compact ? "2px 0" : "4px 0",
+            cursor: "pointer",
+            position: "relative",
+            transition: "color 0.15s",
+            opacity: 0.85
+        };
+    }
+
+    // For desktop, rate 4 gets smaller size
     const isRate4 = rate === 4;
     return {
         width: isRate4 ? 32 : 40,
@@ -23,7 +42,7 @@ const iconStyle = (active, hover, _isMobile, rate) => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        margin: isRate4 ? "8px 0" : "10px 0",
+        margin: compact ? "2px 0" : (isRate4 ? "8px 0" : "10px 0"),
         cursor: "pointer",
         position: "relative",
         transition: "color 0.15s",
@@ -35,7 +54,8 @@ export default function ArtistActions({
     artistId,
     onComment = () => { },
     column = 'right',
-    rate = 1
+    rate = 1,
+    compact = false // NEW: compact mode for closer icons
 }) {
     const [liked, setLiked] = useState(false);
     const [disliked, setDisliked] = useState(false);
@@ -44,8 +64,20 @@ export default function ArtistActions({
     const [comments, setComments] = useState(0);
     const [hovered, setHovered] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [isMobile, setIsMobile] = useState(false);
     const navigate = useNavigate();
     const { user } = useAuth();
+
+    // Effect for screen size detection
+    useEffect(() => {
+        const checkScreenSize = () => {
+            setIsMobile(window.innerWidth < 768);
+        };
+
+        checkScreenSize();
+        window.addEventListener('resize', checkScreenSize);
+        return () => window.removeEventListener('resize', checkScreenSize);
+    }, []);
 
     useEffect(() => {
         const fetchData = async () => {
@@ -144,8 +176,8 @@ export default function ArtistActions({
         {
             key: "like",
             icon: <LikeIcon style={{
-                width: 32,
-                height: 32,
+                width: isMobile ? 18 : (rate === 4 ? 26 : 32),
+                height: isMobile ? 18 : (rate === 4 ? 26 : 32),
                 display: 'block'
             }} />,
             count: likes,
@@ -153,19 +185,19 @@ export default function ArtistActions({
             active: liked,
             countStyle: column === 'right'
                 ? {
-                    right: "-7px",
-                    top: "-6px"
+                    right: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
+                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
                 }
                 : {
-                    left: "-7px",
-                    top: "-6px"
+                    left: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
+                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
                 }
         },
         {
             key: "dislike",
             icon: <DislikeIcon style={{
-                width: 32,
-                height: 32,
+                width: isMobile ? 18 : (rate === 4 ? 26 : 32),
+                height: isMobile ? 18 : (rate === 4 ? 26 : 32),
                 display: 'block'
             }} />,
             count: dislikes,
@@ -173,33 +205,33 @@ export default function ArtistActions({
             active: disliked,
             countStyle: column === 'right'
                 ? {
-                    right: "-7px",
-                    top: "-6px"
+                    right: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
+                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
                 }
                 : {
-                    left: "-7px",
-                    top: "-6px"
+                    left: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
+                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
                 }
         },
         {
             key: "comment",
             icon: <CommentIcon style={{
-                width: 26,
-                height: 26,
+                width: isMobile ? 14 : (rate === 4 ? 20 : 26),
+                height: isMobile ? 14 : (rate === 4 ? 20 : 26),
                 display: 'block',
-                marginTop: '-12px'
+                marginTop: isMobile ? '-8px' : (rate === 4 ? '-12px' : '-15px')
             }} />,
             count: comments,
             onClick: handleCommentClick,
             active: false,
             countStyle: column === 'right'
                 ? {
-                    right: "-7px",
-                    top: "-6px"
+                    right: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
+                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
                 }
                 : {
-                    left: "-7px",
-                    top: "-6px"
+                    left: isMobile ? "-5px" : (rate === 4 ? "-6px" : "-7px"),
+                    top: isMobile ? "-4px" : (rate === 4 ? "-5px" : "-6px")
                 }
         },
     ];
@@ -231,7 +263,7 @@ export default function ArtistActions({
                     whileTap={{ scale: 0.9 }}
                 >
                     <div
-                        style={iconStyle(action.active, hovered === action.key, false, rate)}
+                        style={iconStyle(action.active, hovered === action.key, isMobile, rate, compact)}
                         onClick={action.onClick}
                         onMouseEnter={() => setHovered(action.key)}
                         onMouseLeave={() => setHovered(null)}
@@ -241,9 +273,9 @@ export default function ArtistActions({
                             ...action.countStyle,
                             backgroundColor: "rgba(255, 255, 255, 0.8)",
                             color: ICON_COLOR,
-                            borderRadius: "10px",
-                            padding: "1px 5px",
-                            fontSize: "11px",
+                            borderRadius: isMobile ? "8px" : (rate === 4 ? "10px" : "12px"),
+                            padding: isMobile ? "1px 4px" : (rate === 4 ? "1px 5px" : "2px 6px"),
+                            fontSize: isMobile ? "10px" : (rate === 4 ? "11px" : "12px"),
                             fontWeight: 600,
                             boxShadow: "0 1px 4px rgba(0, 0, 0, 0.2)"
                         }}>

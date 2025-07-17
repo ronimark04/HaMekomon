@@ -15,6 +15,23 @@ import area_14_jerusalemOverlay from '../assets/map/overlays/area_14_jerusalem.p
 import area_15_northernNegevOverlay from '../assets/map/overlays/area_15_northernNegev.png';
 import area_16_aravaOverlay from '../assets/map/overlays/area_16_arava.png';
 
+import area_01_upperGalileeUnderlay from '../assets/map/underlays/area_01_upperGalilee.png';
+import area_02_westernGalileeUnderlay from '../assets/map/underlays/area_02_westernGalilee.png';
+import area_03_krayotUnderlay from '../assets/map/underlays/area_03_krayot.png';
+import area_04_haifaUnderlay from '../assets/map/underlays/area_04_haifa.png';
+import area_05_jordanValleyUnderlay from '../assets/map/underlays/area_05_jordanValley.png';
+import area_06_lowerGalileeUnderlay from '../assets/map/underlays/area_06_lowerGalilee.png';
+import area_07_heferValleyUnderlay from '../assets/map/underlays/area_07_heferValley.png';
+import area_08_judeaAndSamariaUnderlay from '../assets/map/underlays/area_08_judeaAndSamaria.png';
+import area_09_sharonUnderlay from '../assets/map/underlays/area_09_sharon.png';
+import area_10_centerUnderlay from '../assets/map/underlays/area_10_center.png';
+import area_11_telAvivUnderlay from '../assets/map/underlays/area_11_telAviv.png';
+import area_12_shfelaUnderlay from '../assets/map/underlays/area_12_shfela.png';
+import area_13_coastUnderlay from '../assets/map/underlays/area_13_coast.png';
+import area_14_jerusalemUnderlay from '../assets/map/underlays/area_14_jerusalem.png';
+import area_15_northernNegevUnderlay from '../assets/map/underlays/area_15_northernNegev.png';
+import area_16_aravaUnderlay from '../assets/map/underlays/area_16_arava.png';
+
 import hebAravaLabel from "../assets/map/titles/hebArava.png";
 import hebCenterLabel from "../assets/map/titles/hebCenter.png";
 import hebCoastLabel from "../assets/map/titles/hebCoast.png";
@@ -86,81 +103,97 @@ import engWesternGalileeAreaTitle from "../assets/area_titles/area_titles_eng_we
 export const regionData = {
     area_01_upperGalilee: {
         overlay: area_01_upperGalileeOverlay,
+        underlay: area_01_upperGalileeUnderlay,
         label: { heb: hebUpperGalileeLabel, eng: engUpperGalileeLabel },
         path: '/area_01_upperGalilee'
     },
     area_02_westernGalilee: {
         overlay: area_02_westernGalileeOverlay,
+        underlay: area_02_westernGalileeUnderlay,
         label: { heb: hebWesternGalileeLabel, eng: engWesternGalileeLabel },
         path: '/area_02_westernGalilee'
     },
     area_03_krayot: {
         overlay: area_03_krayotOverlay,
+        underlay: area_03_krayotUnderlay,
         label: { heb: hebKrayotLabel, eng: engKrayotLabel },
         path: '/area_03_krayot'
     },
     area_04_haifa: {
         overlay: area_04_haifaOverlay,
+        underlay: area_04_haifaUnderlay,
         label: { heb: hebHaifaLabel, eng: engHaifaLabel },
         path: '/area_04_haifa'
     },
     area_05_jordanValley: {
         overlay: area_05_jordanValleyOverlay,
+        underlay: area_05_jordanValleyUnderlay,
         label: { heb: hebJordanValleyLabel, eng: engJordanValleyLabel },
         path: '/area_05_jordanValley'
     },
     area_06_lowerGalilee: {
         overlay: area_06_lowerGalileeOverlay,
+        underlay: area_06_lowerGalileeUnderlay,
         label: { heb: hebLowerGalileeLabel, eng: engLowerGalileeLabel },
         path: '/area_06_lowerGalilee'
     },
     area_07_heferValley: {
         overlay: area_07_heferValleyOverlay,
+        underlay: area_07_heferValleyUnderlay,
         label: { heb: hebHeferValleyLabel, eng: engHeferValleyLabel },
         path: '/area_07_heferValley'
     },
     area_08_judeaAndSamaria: {
         overlay: area_08_judeaAndSamariaOverlay,
+        underlay: area_08_judeaAndSamariaUnderlay,
         label: { heb: hebJudeaAndSamariaLabel, eng: engJudeaAndSamariaLabel },
         path: '/area_08_judeaAndSamaria'
     },
     area_09_sharon: {
         overlay: area_09_sharonOverlay,
+        underlay: area_09_sharonUnderlay,
         label: { heb: hebSharonLabel, eng: engSharonLabel },
         path: '/area_09_sharon'
     },
     area_10_center: {
         overlay: area_10_centerOverlay,
+        underlay: area_10_centerUnderlay,
         label: { heb: hebCenterLabel, eng: engCenterLabel },
         path: '/area_10_center'
     },
     area_11_telAviv: {
         overlay: area_11_telAvivOverlay,
+        underlay: area_11_telAvivUnderlay,
         label: { heb: hebTelAvivLabel, eng: engTelAvivLabel },
         path: '/area_11_telAviv'
     },
     area_12_shfela: {
         overlay: area_12_shfelaOverlay,
+        underlay: area_12_shfelaUnderlay,
         label: { heb: hebShfelaLabel, eng: engShfelaLabel },
         path: '/area_12_shfela'
     },
     area_13_coast: {
         overlay: area_13_coastOverlay,
+        underlay: area_13_coastUnderlay,
         label: { heb: hebCoastLabel, eng: engCoastLabel },
         path: '/area_13_coast'
     },
     area_14_jerusalem: {
         overlay: area_14_jerusalemOverlay,
+        underlay: area_14_jerusalemUnderlay,
         label: { heb: hebJerusalemLabel, eng: engJerusalemLabel },
         path: '/area_14_jerusalem'
     },
     area_15_northernNegev: {
         overlay: area_15_northernNegevOverlay,
+        underlay: area_15_northernNegevUnderlay,
         label: { heb: hebNorthernNegevLabel, eng: engNorthernNegevLabel },
         path: '/area_15_northernNegev'
     },
     area_16_arava: {
         overlay: area_16_aravaOverlay,
+        underlay: area_16_aravaUnderlay,
         label: { heb: hebAravaLabel, eng: engAravaLabel },
         path: '/area_16_arava'
     }

@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import Map from './components/Map'
+import Map from './components/MapFullScreen'
 import Home from './components/Home'
 import SiteNavbar from "./components/SiteNavbar";
 import AreaPage from "./components/AreaPage";
@@ -21,13 +21,13 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  if (windowWidth < 1000) {
-    return (
-      <div style={{ minHeight: '100vh', minWidth: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'white', zIndex: 99999 }}>
-        <img src={samllScreenImg} alt="Small screen warning" style={{ width: 500, maxWidth: '90vw', height: 'auto' }} />
-      </div>
-    );
-  }
+  // if (windowWidth < 480) {
+  //   return (
+  //     <div style={{ minHeight: '100vh', minWidth: '100vw', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'white', zIndex: 99999 }}>
+  //       <img src={samllScreenImg} alt="Small screen warning" style={{ width: 500, maxWidth: '90vw', height: 'auto' }} />
+  //     </div>
+  //   );
+  // }
 
   return (
     <AuthProvider>

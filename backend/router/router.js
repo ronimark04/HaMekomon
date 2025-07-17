@@ -18,8 +18,9 @@ router.use("/artist-votes", artistVoteRouterController);
 router.use("/comment-votes", commentVoteRouterController);
 router.use("/contact", contactRestController);
 
-router.get('/', (req, res) => {
-    res.send('HaMekomon API');
+// for 14-min pings to keep server alive
+router.get('/health', (req, res) => {
+    res.status(200).send('OK');
 });
 
 router.use((req, res) => {

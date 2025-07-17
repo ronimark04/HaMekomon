@@ -262,7 +262,7 @@ export default function SiteNavbar() {
           {/* Left: Home logo and Profile */}
           <div className="flex items-center gap-4">
             {/* Burger icon for mobile */}
-            <div className="md:hidden relative" ref={burgerRef}
+            <div className="md:hidden relative mt-0 -mr-2.5 mb-0 -ml-2.5" ref={burgerRef}
               onMouseEnter={() => setBurgerOpen(true)}
               onMouseLeave={() => setBurgerOpen(false)}>
               <img
@@ -335,7 +335,12 @@ export default function SiteNavbar() {
               )}
             </div>
             <RouterLink to="/">
-              <img src={homeIcon} alt="Home" style={{ width: 36 }} />
+              <img
+                src={homeIcon}
+                alt="Home"
+                style={{ width: 36 }}
+                className="transition-opacity duration-150 hover:opacity-85"
+              />
             </RouterLink>
             {/* Desktop links (hidden on mobile) */}
             <div className="hidden md:flex items-center gap-4">
