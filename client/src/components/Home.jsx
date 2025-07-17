@@ -32,14 +32,14 @@ function Home() {
                         <img
                             src={logoEngMobile}
                             alt="HaMekomon"
-                            style={{ width: '400px', maxWidth: '90vw', pointerEvents: 'none' }}
+                            style={{ width: '400px', maxWidth: '90vw', pointerEvents: 'none', marginBottom: '-25px' }}
                         />
                     )}
                     {language === 'heb' && (
                         <img
                             src={logoHebMobile}
                             alt="המקומון"
-                            style={{ width: '320px', maxWidth: '90vw', marginBottom: '-15px', pointerEvents: 'none' }}
+                            style={{ width: '280px', maxWidth: '90vw', marginBottom: '-40px', pointerEvents: 'none' }}
                         />
                     )}
                 </div>
@@ -50,7 +50,7 @@ function Home() {
                     </div>
                 </div>
                 {/* Contact */}
-                <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
+                {/* <div style={{ width: '100%', display: 'flex', justifyContent: 'center', marginBottom: 10 }}>
                     <div style={{ width: '200px', display: 'flex', flexDirection: 'column', alignItems: 'center', position: 'relative' }}>
                         <img
                             src={language === 'heb' ? contact1Heb : contact1Eng}
@@ -71,7 +71,7 @@ function Home() {
                             </motion.div>
                         </Link>
                     </div>
-                </div>
+                </div> */}
             </div>
         );
     }
