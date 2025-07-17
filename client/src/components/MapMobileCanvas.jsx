@@ -64,18 +64,25 @@ export default function MapMobileCanvas() {
     useEffect(() => {
         let isMounted = true;
         async function loadAllImages() {
-            const imgMap = {};
-            imgMap.base = await preloadImage(baseMapUnderlay);
-            for (const [regionId, region] of Object.entries(regionData)) {
-                imgMap[`${regionId}_underlay`] = await preloadImage(region.underlay);
-                imgMap[`${regionId}_overlay`] = await preloadImage(region.overlay);
-                if (region.label) {
-                    if (region.label.heb) imgMap[`${regionId}_label_heb`] = await preloadImage(region.label.heb);
-                    if (region.label.eng) imgMap[`${regionId}_label_eng`] = await preloadImage(region.label.eng);
-                }
-            }
+            const imgEntries = [
+                ['base', baseMapUnderlay],
+                ...Object.entries(regionData).flatMap(([regionId, region]) => {
+                    const entries = [
+                        [`${regionId}_underlay`, region.underlay],
+                        [`${regionId}_overlay`, region.overlay]
+                    ];
+                    if (region.label) {
+                        if (region.label.heb) entries.push([`${regionId}_label_heb`, region.label.heb]);
+                        if (region.label.eng) entries.push([`${regionId}_label_eng`, region.label.eng]);
+                    }
+                    return entries;
+                })
+            ];
+            const loadedImages = await Promise.all(imgEntries.map(([key, src]) =>
+                preloadImage(src).then(img => [key, img])
+            ));
             if (isMounted) {
-                setImages(imgMap);
+                setImages(Object.fromEntries(loadedImages));
                 setImagesLoaded(true);
             }
         }
