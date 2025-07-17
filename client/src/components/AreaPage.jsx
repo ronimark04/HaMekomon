@@ -179,7 +179,7 @@ const AreaPage = () => {
             xl: ['w-52 h-52', 'w-40 h-40', 'w-36 h-36', 'w-28 h-28'], // 208, 160, 144, 112
             lg: ['w-40 h-40', 'w-32 h-32', 'w-28 h-28', 'w-24 h-24'], // 160, 128, 112, 96
             md: ['w-32 h-32', 'w-28 h-28', 'w-24 h-24', 'w-20 h-20'], // 128, 112, 96, 80
-            sm: ['w-28 h-28', 'w-24 h-24', 'w-20 h-20', 'w-16 h-16'], // 112, 96, 80, 64
+            sm: ['w-24 h-24', 'w-20 h-20', 'w-16 h-16', 'w-16 h-16'], // was [112, 96, 80, 64], now smaller except for rate 4
         };
         const idx = Math.max(0, Math.min(3, (rate || 1) - 1));
         const arr = sizes[screenSize] || sizes.sm;
@@ -191,7 +191,7 @@ const AreaPage = () => {
             xl: [208, 160, 144, 112],
             lg: [160, 128, 112, 96],
             md: [128, 112, 96, 80],
-            sm: [112, 96, 80, 64],
+            sm: [96, 80, 64, 64], // was [112, 96, 80, 64], now smaller except for rate 4
         };
         const idx = Math.max(0, Math.min(3, (rate || 1) - 1));
         const arr = px[screenSize] || px.sm;
@@ -278,7 +278,7 @@ const AreaPage = () => {
             xl: 55,
             lg: 48,
             md: 35,
-            sm: 32,
+            sm: 24
         };
         return offsets[screenSize] || offsets.sm;
     };

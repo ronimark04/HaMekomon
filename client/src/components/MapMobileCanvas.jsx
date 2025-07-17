@@ -112,15 +112,15 @@ export default function MapMobileCanvas() {
             ctx.clearRect(0, 0, canvasSize.width, canvasSize.height + verticalOffset);
             ctx.drawImage(images.base, 0, verticalOffset, canvasSize.width, canvasSize.height);
             for (const regionId of Object.keys(regionData)) {
-                if (regionId === selectedRegion && !isConfirmed) {
-                    // Selected underlay rises upward: y from 0 to -5
+                if (regionId === selectedRegion) {
+                    // Always raise the selected underlay, even if confirmed
                     ctx.drawImage(images[`${regionId}_underlay`], 0, verticalOffset - 5 * overlayAlpha, canvasSize.width, canvasSize.height);
                 } else {
                     // Other underlays remain static
                     ctx.drawImage(images[`${regionId}_underlay`], 0, verticalOffset, canvasSize.width, canvasSize.height);
                 }
             }
-            if (selectedRegion && !isConfirmed) {
+            if (selectedRegion) {
                 ctx.save();
                 ctx.globalAlpha = overlayAlpha;
                 // Overlay rises upward: y from 0 to -5
@@ -191,28 +191,26 @@ export default function MapMobileCanvas() {
             if (ctx.isPointInPath(path, x, y)) {
                 if (selectedRegionRef.current === id) {
                     setIsConfirmed(true);
-                    setTimeout(() => {
-                        const regionToPathMap = {
-                            'area_01_upperGalilee': 'upper-galilee',
-                            'area_02_westernGalilee': 'western-galilee',
-                            'area_03_krayot': 'krayot',
-                            'area_04_haifa': 'haifa-area',
-                            'area_05_jordanValley': 'jordan-valley',
-                            'area_06_lowerGalilee': 'lower-galilee',
-                            'area_07_heferValley': 'hefer-valley',
-                            'area_08_judeaAndSamaria': 'judea-and-samaria',
-                            'area_09_sharon': 'sharon',
-                            'area_10_center': 'center',
-                            'area_11_telAviv': 'tel-aviv',
-                            'area_12_shfela': 'shfela',
-                            'area_13_coast': 'coast',
-                            'area_14_jerusalem': 'jerusalem-area',
-                            'area_15_northernNegev': 'northern-negev',
-                            'area_16_arava': 'southern-negev-and-arava'
-                        };
-                        const path = regionToPathMap[id];
-                        if (path) navigate(`/area/${path}`);
-                    }, 250);
+                    const regionToPathMap = {
+                        'area_01_upperGalilee': 'upper-galilee',
+                        'area_02_westernGalilee': 'western-galilee',
+                        'area_03_krayot': 'krayot',
+                        'area_04_haifa': 'haifa-area',
+                        'area_05_jordanValley': 'jordan-valley',
+                        'area_06_lowerGalilee': 'lower-galilee',
+                        'area_07_heferValley': 'hefer-valley',
+                        'area_08_judeaAndSamaria': 'judea-and-samaria',
+                        'area_09_sharon': 'sharon',
+                        'area_10_center': 'center',
+                        'area_11_telAviv': 'tel-aviv',
+                        'area_12_shfela': 'shfela',
+                        'area_13_coast': 'coast',
+                        'area_14_jerusalem': 'jerusalem-area',
+                        'area_15_northernNegev': 'northern-negev',
+                        'area_16_arava': 'southern-negev-and-arava'
+                    };
+                    const path = regionToPathMap[id];
+                    if (path) navigate(`/area/${path}`);
                 } else {
                     animState.current = { overlay: 0, label: 0 }; // Reset animation state
                     setSelectedRegion(id);
