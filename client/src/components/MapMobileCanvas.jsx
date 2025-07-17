@@ -38,6 +38,11 @@ export default function MapMobileCanvas() {
         const h = w * (3088 / 2502.6667);
         return { width: w, height: h, dpr };
     });
+    // Add refs for navigation logic
+    const selectedRegionRef = useRef(null);
+    const isConfirmedRef = useRef(false);
+    useEffect(() => { selectedRegionRef.current = selectedRegion; }, [selectedRegion]);
+    useEffect(() => { isConfirmedRef.current = isConfirmed; }, [isConfirmed]);
 
     useEffect(() => {
         function handleResize() {
@@ -177,7 +182,7 @@ export default function MapMobileCanvas() {
         for (const { id, d } of mapPaths) {
             const path = new window.Path2D(d);
             if (ctx.isPointInPath(path, x, y)) {
-                if (selectedRegion === id) {
+                if (selectedRegionRef.current === id) {
                     setIsConfirmed(true);
                     setTimeout(() => {
                         const regionToPathMap = {
