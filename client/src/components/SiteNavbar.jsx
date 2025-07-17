@@ -373,15 +373,41 @@ export default function SiteNavbar() {
               style={{ borderRadius: '0.5rem', width: 'fit-content' }}
               className="mr-2 ml-2"
             >
-              <Button
-                variant="flat"
-                className="text-yellow-900 font-normal shadow-sm focus:ring-2 focus:ring-yellow-300 focus:outline-none px-2 py-1 text-xs h-8 md:px-4 md:py-2 md:text-base md:h-10"
-                onPress={handleRandomArtist}
-                isLoading={loadingArtists}
-                style={{ background: 'transparent' }}
+              <button
+                type="button"
+                className="text-yellow-900 font-normal shadow-sm focus:ring-2 focus:ring-yellow-300 focus:outline-none px-2 py-1 text-xs h-8 md:px-4 md:py-2 md:text-base md:h-10 rounded-lg bg-transparent flex items-center justify-center disabled:opacity-60 whitespace-nowrap"
+                onClick={handleRandomArtist}
+                disabled={loadingArtists}
+                style={{ background: 'transparent', borderRadius: '0.5rem', width: 'fit-content' }}
               >
-                {language === "heb" ? "אמן רנדומלי" : "Random Artist"}
-              </Button>
+                {loadingArtists ? (
+                  <span className="flex items-center">
+                    <svg
+                      className="animate-spin h-5 w-5 text-yellow-900 mr-2"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                    >
+                      <circle
+                        className="opacity-25"
+                        cx="12"
+                        cy="12"
+                        r="10"
+                        stroke="currentColor"
+                        strokeWidth="4"
+                      />
+                      <path
+                        className="opacity-75"
+                        fill="currentColor"
+                        d="M4 12a8 8 0 018-8v4a4 4 0 00-4 4H4z"
+                      />
+                    </svg>
+                    <span className="sr-only">{language === "heb" ? "טוען..." : "Loading..."}</span>
+                  </span>
+                ) : (
+                  language === "heb" ? "אמן רנדומלי" : "Random Artist"
+                )}
+              </button>
             </motion.div>
             {/* Search Bar with Dropdown */}
             <div className="relative">
@@ -418,7 +444,7 @@ export default function SiteNavbar() {
                       className={`px-4 py-2 hover:bg-gray-100 dark:hover:bg-zinc-700 cursor-pointer border-b border-gray-100 dark:border-gray-700 last:border-b-0 ${index === selectedIndex ? 'bg-gray-100 dark:bg-zinc-700' : ''
                         }`}
                     >
-                      <div className="font-light">
+                      <div className="font-light text-black dark:text-white">
                         {stripParentheses(artist.name.heb)} / {stripParentheses(artist.name.eng)}
                       </div>
                     </div>
