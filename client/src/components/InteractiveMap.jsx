@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import MapFullScreen from './MapFullScreen.jsx';
-import MapMobile from './MapMobile.jsx';
+//import MapMobile from './MapMobile.jsx';
+import MapMobileCanvas from './MapMobileCanvas.jsx';
 
 export default function InteractiveMap() {
     const [isMobile, setIsMobile] = useState(() =>
@@ -14,5 +15,5 @@ export default function InteractiveMap() {
         return () => mediaQuery.removeEventListener('change', handleChange);
     }, []);
 
-    return isMobile ? <MapMobile /> : <MapFullScreen />;
+    return isMobile ? <MapMobileCanvas /> : <MapFullScreen />;
 } 
