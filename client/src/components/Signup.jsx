@@ -71,6 +71,7 @@ const inputStyle = {
     fontSize: 15,
     outline: 'none',
     marginBottom: 6,
+    color: 'black', // Ensure input text is always black
 };
 
 const buttonStyle = {
